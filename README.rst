@@ -34,4 +34,4 @@ Usage
     $ black python_lifecycle_training tests
 
 .. image:: docs/_static/black/img/usage.png
-   :alt: The output when your run black
+   :alt: Black output
