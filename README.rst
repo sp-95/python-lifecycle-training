@@ -15,14 +15,14 @@ there are other control flow operations that impact the calculus of the cyclomat
 complexity. It is also referred to as McCabe complexity.
 
 Installation
-~~~~~~~~~~~~
+------------
 
 .. code-block:: console
 
     $ poetry add flake8 --dev
 
 Configuration
-~~~~~~~~~~~~~
+-------------
 
 Create a ``setup.cfg`` file and add the following:
 
@@ -37,14 +37,14 @@ Create a ``setup.cfg`` file and add the following:
         __init__.py: F401
 
 Usage
-~~~~~
+-----
 
 .. code-block:: console
 
     $ flake8 python_lifecycle tests
 
 Output
-######
+~~~~~~
 
 .. code-block:: console
 
