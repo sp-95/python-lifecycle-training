@@ -43,4 +43,13 @@ After
 
     from python_lifecycle_training import __version__
 
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``init/type-hint/mypy``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout init/type-hint/mypy
+
 .. _plugins for various editors: https://github.com/pycqa/isort/wiki/isort-Plugins
