@@ -41,16 +41,22 @@ Instructions
         end_of_line = lf
         insert_final_newline = true
 
-        # Matches multiple files with brace expansion notation
         # Set default charset
-        [*.{js,py}]
-        charset = utf-8
-
         # 4 space indentation
         [*.py]
+        charset = utf-8
         indent_style = space
         indent_size = 4
 
         # Tab indentation (no size specified)
         [Makefile]
         indent_style = tab
+
+2. To move on to the next step check your solution, commit or stash them then checkout
+   to branch init/format/flake8
+
+   .. code-block:: console
+
+        $ git diff init/format/flake8
+        $ git stash
+        $ git checkout init/format/flake8
