@@ -8,5 +8,5 @@ from pytest import fixture
 from python_lifecycle_training import __version__
 
 
-def test_version():
+def test_version() -> None:
     assert __version__ == "0.1.0"
