@@ -53,9 +53,9 @@ Instructions
         indent_style = tab
 
 2. To move on to the next step commit or stash your changes then checkout to the branch
-   ``init/format/flake8``
+   ``init/lint/flake8``
 
    .. code-block:: console
 
         $ git stash
-        $ git checkout init/format/flake8
+        $ git checkout init/lint/flake8
