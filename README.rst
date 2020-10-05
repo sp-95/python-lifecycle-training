@@ -48,10 +48,19 @@ Resolution
     from typing import Union
 
 
-        def add(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
-           return a + b
+    def add(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+       return a + b
 
 .. code-block:: python
 
     def test_version() -> None:
         assert __version__ == "0.1.0"
+
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``init/pre-commit``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout init/pre-commit
