@@ -64,3 +64,12 @@ Output
     tests/calculator/test_simple.py:6:1: F401 'pathlib.Path' imported but unused
     from pathlib import Path
     ^
+
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``init/format/black``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout init/format/black
