@@ -35,3 +35,12 @@ Usage
 
 .. image:: docs/_static/black/img/usage.png
    :alt: Black output
+
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``init/format/isort``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout init/format/isort
