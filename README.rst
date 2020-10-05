@@ -4,7 +4,7 @@ MyPy
 
 **Mypy** is a static type checker for Python. If you sprinkle your code with type
 annotations, mypy can type check your code and find common bugs. As mypy is a static
-analyzer, or a lint-like tool, the type annotations are just hints for mypy and don’t
+analyzer or a lint-like tool, the type annotations are just hints for mypy and don’t
 interfere when running your program. You run your program with a standard Python
 interpreter, and the annotations are treated effectively as comments.
 
