@@ -52,11 +52,10 @@ Instructions
         [Makefile]
         indent_style = tab
 
-2. To move on to the next step check your solution, commit or stash them then checkout
-   to branch init/format/flake8
+2. To move on to the next step commit or stash your changes then checkout to the branch
+   ``init/format/flake8``
 
    .. code-block:: console
 
-        $ git diff init/format/flake8
         $ git stash
         $ git checkout init/format/flake8
