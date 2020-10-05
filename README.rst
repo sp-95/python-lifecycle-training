@@ -43,27 +43,8 @@ Usage
 
     $ flake8 python_lifecycle tests
 
-Output
-~~~~~~
-
-.. code-block:: console
-
-    python_lifecycle:0:1: E902 FileNotFoundError: [Errno 2] No such file or directory: 'python_lifecycle'
-    tests/calculator/test_simple.py:2:1: F401 'python_lifecycle' imported but unused
-    import python_lifecycle
-    ^
-    tests/calculator/test_simple.py:3:1: F401 'pytest.fixture' imported but unused
-    from pytest import fixture
-    ^
-    tests/calculator/test_simple.py:4:1: F401 'pytest' imported but unused
-    import pytest
-    ^
-    tests/calculator/test_simple.py:5:1: F401 'os' imported but unused
-    import os
-    ^
-    tests/calculator/test_simple.py:6:1: F401 'pathlib.Path' imported but unused
-    from pathlib import Path
-    ^
+.. image:: docs/_static/flake8/img/usage.png
+   :alt: Flake8 output
 
 
 To move on to the next step commit or stash your changes then checkout to the branch
