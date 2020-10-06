@@ -86,10 +86,13 @@ Then, from the command line, you can run:
 
     $ python -m python_lifecycle_training.calculator.complex add 2 2
     4
+
     $ python -m python_lifecycle_training.calculator.complex sub 2 2
     0
+
     $ python -m python_lifecycle_training.calculator.complex mul 2 2
     4
+
     $ python -m python_lifecycle_training.calculator.complex div 2 2
     1.0
 
@@ -136,8 +139,27 @@ Now you can run:
 
     $ calc-simp 2 2
     4
+
     $ calc-complex add 2 2
     4
 
 .. note:: Comment out ``disallow_untyped_defs = true`` for *mypy* in ``setup.cfg`` for
    convenience
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/log/loguru``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/log/loguru
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove fire
