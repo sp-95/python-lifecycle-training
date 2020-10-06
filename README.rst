@@ -215,8 +215,9 @@ Add a badge
         :target: https://github.com/pre-commit/pre-commit
         :alt: pre-commit
 
-.. note:: You can remove flake8, black, isort and mypy dependencies as pre-commit covers
-   them all
+.. note:: You can remove the unused imports in ``test_simple.py`` in order to pass
+   flake8 tests. You can remove flake8, black, isort and mypy dependencies as well
+   because pre-commit has them all covered
 
 Next Step
 ---------
