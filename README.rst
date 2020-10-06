@@ -219,12 +219,12 @@ Next Step
 ---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
-``setup/cli``
+``setup/cli/fire``
 
 .. code-block:: console
 
     $ git stash
-    $ git checkout setup/cli
+    $ git checkout setup/cli/fire
 
 Uninstall
 ---------
