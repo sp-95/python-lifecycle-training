@@ -45,6 +45,19 @@ After
     import python_lifecycle_training
     from python_lifecycle_training import __version__
 
+Add a badge
+-----------
+
+.. image:: https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336
+    :target: https://pycqa.github.io/isort/
+    :alt: imports: isort
+
+.. code-block:: RST
+
+    .. image:: https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336
+        :target: https://pycqa.github.io/isort/
+        :alt: imports: isort
+
 Next Step
 ---------
 
