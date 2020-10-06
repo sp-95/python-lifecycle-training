@@ -2,7 +2,7 @@
 Logging: loguru
 ===============
 
-**Loguru** is a library which aims to bring enjoyable logging in Python.
+**Loguru** is a library that aims to bring enjoyable logging in Python.
 
 Also, this library is intended to make Python logging less painful by adding a bunch of
 useful functionalities that solve caveats of the standard loggers. Using logs in your
@@ -51,7 +51,7 @@ Configuration
 -------------
 
 If you want to send logged messages to a file, you just have to use a string path as the
-sink. It is also easily configurable if you need rotating logger.
+sink. It is also easily configurable if you need a rotating logger.
 
 Add the following in your package __init__.py file:
 
@@ -67,3 +67,24 @@ Add the following in your package __init__.py file:
 
 If you run the command ``calc-simp 1 2`` once more you can see that your log files have
 been created in the directory ``logs``.
+
+.. note:: You can remove the variable ``__version__`` in your package ``__init__.py``
+    file
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/config/dynaconf``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/config/dynaconf
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove loguru
