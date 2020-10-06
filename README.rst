@@ -46,3 +46,10 @@ To move on to the next step commit or stash your changes then checkout to the br
 
     $ git stash
     $ git checkout init/format/isort
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove black --dev
