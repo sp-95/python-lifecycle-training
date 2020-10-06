@@ -38,6 +38,8 @@ Usage
 .. image:: docs/_static/black/img/usage.png
    :alt: Black output
 
+Next Step
+---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
 ``init/format/isort``
