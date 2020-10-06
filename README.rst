@@ -9,6 +9,8 @@ formatting. You will save time and mental energy for more important matters.
 code looks the same regardless of the project you’re reading. Formatting becomes
 transparent after a while and you can focus on the content instead.
 
+For further information visit https://black.readthedocs.io/en/stable/
+
 Installation
 ------------
 
