@@ -5,7 +5,7 @@ Configuration Management: dynaconf
 Features
 --------
 
-* Inspired by the 12-factor application guide
+* Inspired by the `12-factor application guide`_
 * **Settings management** (default values, validation, parsing, templating)
 * Protection of **sensitive information** (passwords/tokens)
 * Multiple **file formats** ``toml|yaml|json|ini|py`` and also customizable loaders.
@@ -116,3 +116,5 @@ Run the command
 
 .. image:: docs/_static/dynaconf/img/broken.png
     :alt: Broken Calculator
+
+.. _12-factor application guide: https://12factor.net/config
