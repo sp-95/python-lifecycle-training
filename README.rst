@@ -45,6 +45,8 @@ After
     import python_lifecycle_training
     from python_lifecycle_training import __version__
 
+Next Step
+---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
 ``init/type-hint/mypy``
