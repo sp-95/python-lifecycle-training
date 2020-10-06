@@ -144,7 +144,7 @@ Now you can run:
     4
 
 .. note:: Comment out ``disallow_untyped_defs = true`` for *mypy* in ``setup.cfg`` for
-   convenience
+    convenience
 
 Next Step
 ---------
