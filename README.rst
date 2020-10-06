@@ -2,7 +2,7 @@
 Command Line Interface: fire
 ============================
 
-**Python Fire** is a library for automatically generating command line interfaces (CLIs)
+**Python Fire** is a library for automatically generating command-line interfaces (CLIs)
 from absolutely any Python object.
 
 * Python Fire is a simple way to create a CLI in Python.
@@ -99,7 +99,7 @@ Then, from the command line, you can run:
 Self-defined Commands
 ---------------------
 
-It is pretty tedious run our commands like this so let us create some entry points.
+It is pretty tedious to run our commands like this so let us create some entry points.
 First replace the file executable ``if __name__ == "__main__":`` with a main method that
 calls your fire command.
 
