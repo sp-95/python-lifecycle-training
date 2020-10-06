@@ -58,6 +58,19 @@ Resolution
     def test_version() -> None:
         assert __version__ == "0.1.0"
 
+Add a badge
+-----------
+
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+    :alt: Checked with mypy
+
+.. code-block:: RST
+
+    .. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+        :target: http://mypy-lang.org/
+        :alt: Checked with mypy
+
 Next Step
 ---------
 
