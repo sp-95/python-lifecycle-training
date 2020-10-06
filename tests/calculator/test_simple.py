@@ -1,10 +1,3 @@
-import os
-from pathlib import Path
-
-import pytest
-from pytest import fixture
-
-import python_lifecycle_training
 from python_lifecycle_training import __version__
 
 
