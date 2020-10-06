@@ -1,5 +1,5 @@
-from typing import Union
+from numbers import Real
 
 
-def add(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+def add(a: Real, b: Real) -> Real:
     return a + b
