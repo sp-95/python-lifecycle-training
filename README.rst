@@ -311,6 +311,24 @@ Other features
 * Django_
 * `Advanced usage`_
 
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/test/pytest``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/test/pytest
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove dynaconf
+
 
 .. _12-factor application guide: https://12factor.net/config
 .. _Secrets: https://www.dynaconf.com/secrets/
