@@ -58,6 +58,8 @@ Resolution
     def test_version() -> None:
         assert __version__ == "0.1.0"
 
+Next Step
+---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
 ``init/pre-commit``
