@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 import pytest
-import python_lifecycle
+import python_lifecycle_training
 from pytest import fixture
 
 from python_lifecycle_training import __version__
