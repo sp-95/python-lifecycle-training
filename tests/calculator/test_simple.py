@@ -1,5 +1,5 @@
 from python_lifecycle_training import __version__
-import python_lifecycle
+import python_lifecycle_training
 from pytest import fixture
 import pytest
 import os
