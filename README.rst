@@ -2,10 +2,12 @@
 isort
 =====
 
-**isort** simply stands for import sort. It is a Python utility/library to sort
-imports alphabetically and automatically separated into sections and by type. It
-provides a command-line utility, Python library, and `plugins for various editors`_ to
-quickly sort all your imports.
+**isort** simply stands for import sort. It is a Python utility/library to sort imports
+alphabetically and automatically separated into sections and by type. It provides a
+command-line utility, Python library, and `plugins for various editors`_ to quickly sort
+all your imports.
+
+For further information visit https://pycqa.github.io/isort/
 
 Installation
 ------------
@@ -23,7 +25,7 @@ Before
 .. code-block:: python
 
     from python_lifecycle_training import __version__
-    import python_lifecycle
+    import python_lifecycle_training
     from pytest import fixture
     import pytest
     import os
@@ -38,7 +40,7 @@ After
     from pathlib import Path
 
     import pytest
-    import python_lifecycle
+    import python_lifecycle_training
     from pytest import fixture
 
     from python_lifecycle_training import __version__
