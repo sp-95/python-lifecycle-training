@@ -215,6 +215,16 @@ Add a badge
        :target: https://github.com/pre-commit/pre-commit
        :alt: pre-commit
 
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/cli``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/cli
 
 Uninstall
 ---------
