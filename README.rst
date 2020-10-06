@@ -48,6 +48,8 @@ Usage
 .. image:: docs/_static/flake8/img/usage.png
    :alt: Flake8 output
 
+Next Step
+---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
 ``init/format/black``
