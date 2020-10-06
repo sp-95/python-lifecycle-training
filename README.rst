@@ -8,6 +8,8 @@ analyzer or a lint-like tool, the type annotations are just hints for mypy and d
 interfere when running your program. You run your program with a standard Python
 interpreter, and the annotations are treated effectively as comments.
 
+For further information visit https://mypy.readthedocs.io/en/stable/introduction.html
+
 Installation
 ------------
 
