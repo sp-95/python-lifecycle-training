@@ -38,6 +38,19 @@ Usage
 .. image:: docs/_static/black/img/usage.png
    :alt: Black output
 
+Add a badge
+-----------
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: black
+
+.. code-block:: RST
+
+    .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+       :target: https://github.com/psf/black
+       :alt: Code style: black
+
 Next Step
 ---------
 
