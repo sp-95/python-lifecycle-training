@@ -189,7 +189,7 @@ Temporarily disable hooks
 
 .. code-block:: console
 
-    SKIP=flake8,mypy git commit
+    $ SKIP=flake8,mypy git commit
 
 .. image:: docs/_static/pre-commit/img/run-skip.png
    :alt: Pre-commit output by disabling hooks
