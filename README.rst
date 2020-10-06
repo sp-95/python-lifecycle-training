@@ -14,6 +14,8 @@ higher number of paths it will have, thus a higher **cyclomatic complexity**. Of
 there are other control flow operations that impact the calculus of the cyclomatic
 complexity. It is also referred to as McCabe complexity.
 
+For further details visit https://flake8.pycqa.org/en/latest/index.html
+
 Installation
 ------------
 
