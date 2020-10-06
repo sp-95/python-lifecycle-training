@@ -47,6 +47,8 @@ To see the log run:
 .. image:: docs/_static/loguru/img/calc-simp.png
     :alt: Logged output
 
+Add logs in the complex calculator in the same way.
+
 Configuration
 -------------
 
