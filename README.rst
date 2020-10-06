@@ -277,10 +277,47 @@ Run command on ``production`` environment from CLI
 
 .. code-block:: console
 
-    calc broken add 2 2 --env=production
+    $ calc broken add 2 2 --env=production
 
 .. image:: docs/_static/dynaconf/img/cli-env-prod.png
     :alt: Broken Calculator
 
+You can switch also between existing environments using:
+
+* from_env: Will create a new settings instance pointing to defined env. You can use
+  this when you have to access a lesser number of config variables at once.
+
+  .. code-block:: python
+
+        settings.from_env("production").name
+
+* setenv: (**not recommended**) Will set the existing instance to defined env. This
+  might seem convenient but may cause problems as the env is not set globally.
+
+  .. code-block:: python
+
+        setenv("production")
+        settings.name
+
+Other features
+--------------
+
+* Secrets_
+* Merging_
+* `Dynamic Variables`_
+* CLI_
+* Validation_
+* Flask_
+* Django_
+* `Advanced usage`_
+
 
 .. _12-factor application guide: https://12factor.net/config
+.. _Secrets: https://www.dynaconf.com/secrets/
+.. _Merging: https://www.dynaconf.com/merging/
+.. _Dynamic Variables: https://www.dynaconf.com/dynamic/
+.. _CLI: https://www.dynaconf.com/cli/
+.. _Validation: https://www.dynaconf.com/validation/
+.. _Flask: https://www.dynaconf.com/flask/
+.. _Django: https://www.dynaconf.com/django/
+.. _Advanced usage: https://www.dynaconf.com/advanced/
