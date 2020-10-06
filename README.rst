@@ -215,6 +215,9 @@ Add a badge
         :target: https://github.com/pre-commit/pre-commit
         :alt: pre-commit
 
+.. note:: You can remove flake8, black, isort and mypy dependencies as pre-commit covers
+   them all
+
 Next Step
 ---------
 
