@@ -26,33 +26,36 @@ For further details visit https://editorconfig.org/
 Instructions
 ------------
 
-1. Create a ``.editorconfig`` file and add the following:
+Create a ``.editorconfig`` file and add the following:
 
-   .. code-block:: RST
+.. code-block:: RST
 
-        # top-most EditorConfig file
-        root = true
+    # top-most EditorConfig file
+    root = true
 
-        # Unix-style newlines with a newline ending every file
-        [*]
-        end_of_line = lf
-        insert_final_newline = true
+    # Unix-style newlines with a newline ending every file
+    [*]
+    end_of_line = lf
+    insert_final_newline = true
 
-        # Set default charset
-        # 4 space indentation
-        [*.py]
-        charset = utf-8
-        indent_style = space
-        indent_size = 4
+    # Set default charset
+    # 4 space indentation
+    [*.py]
+    charset = utf-8
+    indent_style = space
+    indent_size = 4
 
-        # Tab indentation (no size specified)
-        [Makefile]
-        indent_style = tab
+    # Tab indentation (no size specified)
+    [Makefile]
+    indent_style = tab
 
-2. To move on to the next step commit or stash your changes then checkout to the branch
-   ``init/lint/flake8``
+Next Step
+---------
 
-   .. code-block:: console
+To move on to the next step commit or stash your changes then checkout to the branch
+``init/lint/flake8``
 
-        $ git stash
-        $ git checkout init/lint/flake8
+.. code-block:: console
+
+    $ git stash
+    $ git checkout init/lint/flake8
