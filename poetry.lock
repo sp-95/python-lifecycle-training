@@ -31,6 +31,23 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "dynaconf"
+version = "3.1.1"
+description = "The dynamic configurator for your Python Project"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+all = ["redis", "ruamel.yaml", "configobj", "hvac"]
+configobj = ["configobj"]
+ini = ["configobj"]
+redis = ["redis"]
+toml = ["toml"]
+vault = ["hvac"]
+yaml = ["ruamel.yaml"]
+
+[[package]]
 name = "filelock"
 version = "3.0.12"
 description = "A platform independent file lock."
@@ -193,7 +210,7 @@ testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "fcc6eee6044bf60f326150ed530d97949cc7714114771e1188ee0dc30736bbaa"
+content-hash = "1fb0821fba0be387c2ea5bca8a8c438221bb541e617c814550de24fbdddf5a43"
 
 [metadata.files]
 appdirs = [
@@ -211,6 +228,10 @@ colorama = [
 distlib = [
     {file = "distlib-0.3.1-py2.py3-none-any.whl", hash = "sha256:8c09de2c67b3e7deef7184574fc060ab8a793e7adbb183d942c389c8b13c52fb"},
     {file = "distlib-0.3.1.zip", hash = "sha256:edf6116872c863e1aa9d5bb7cb5e05a022c519a4594dc703843343a9ddd9bff1"},
+]
+dynaconf = [
+    {file = "dynaconf-3.1.1-py2.py3-none-any.whl", hash = "sha256:94d7cf183ab98dc30a2b2ae64ebe6d35621db975555eeb939997ddc134f6d65c"},
+    {file = "dynaconf-3.1.1.tar.gz", hash = "sha256:8bb72cbcd8f2d495665ea24000ba61160b82610e30b6afdd27893af7bdb80c6b"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
