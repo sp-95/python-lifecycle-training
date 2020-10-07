@@ -12,9 +12,13 @@ dynaconf = "^3.1.1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.7.1"
+pytest = "^6.1.1"
 
 [tool.poetry.scripts]
 calc = "python_lifecycle_training.calculator.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
