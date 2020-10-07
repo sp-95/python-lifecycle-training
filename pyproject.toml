@@ -13,12 +13,43 @@ dynaconf = "^3.1.1"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.7.1"
 pytest = "^6.1.1"
+coverage = "^5.3"
 
 [tool.poetry.scripts]
 calc = "python_lifecycle_training.calculator.cli:main"
 
 [tool.pytest.ini_options]
 testpaths = "tests"
+
+[tool.coverage.run]
+branch = true
+source = [
+    "python_lifecycle_training",
+]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_lines = [
+    # Have to re-enable the standard pragma
+    "pragma: no cover",
+
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if 0:",
+    "if __name__ == .__main__.:",
+
+    # Don't complain about fire commands
+    "fire.Fire",
+]
+fail_under = 90
+ignore_errors = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
