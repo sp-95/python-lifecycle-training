@@ -13,6 +13,7 @@ dynaconf = "^3.1.1"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.7.1"
 pytest-cov = "^2.10.1"
+tox = "^3.20.0"
 
 [tool.poetry.scripts]
 calc = "python_lifecycle_training.calculator.cli:main"
