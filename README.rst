@@ -11,7 +11,7 @@ Testing: pytest-cov
   slightly different ``sys.path`` (CWD will be in it, unlike when running ``pytest``).
 
 All features offered by the coverage package should work, either through pytest-cov’s
-command line options or through coverage’s config file.
+command-line options or through coverage’s config file.
 
 Installation
 ------------
@@ -63,7 +63,8 @@ HTML report:
 Configuration
 -------------
 
-Update the ``pytest`` configuration in ``pyproject.toml``
+Update the ``pytest`` configuration in ``pyproject.toml`` so that ``pytest-cov`` always
+runs when you run ``pytest``.
 
 .. code-block:: cfg
 
@@ -113,8 +114,8 @@ Run tests
 Exceptions
 ~~~~~~~~~~
 
-In order to write assertions about raised exceptions, you need to use ``pytest.raises``
-as a context manager.
+To write assertions about raised exceptions, you need to use ``pytest.raises`` as a
+context manager.
 
 .. code-block:: python
 
@@ -164,7 +165,7 @@ server. Let's write a warning when we encounter this problem.
                 return a / b
 
 You can check that code raises a particular warning using ``pytest.warns``, which works
-in a similar manner to ``raises``.
+similar to ``raises``.
 
 .. code-block:: python
 
@@ -195,7 +196,7 @@ Logs
 ~~~~
 
 Pytest cannot capture logs from loguru directly. So we need to propagate our logs to the
-built-in python logging in order to test log messages using pytest.
+built-in Python logging to test log messages using pytest.
 
 Add the propagation handler in the project ``__init__.py`` file.
 
