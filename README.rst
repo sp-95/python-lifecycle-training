@@ -324,3 +324,21 @@ Auto-generate your project meta
 
     # The full version, including alpha/beta/rc tags
     release = version
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``deploy/ci/github-actions``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout deploy/ci/github-actions
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove sphinx-rtd-theme --dev
