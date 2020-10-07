@@ -13,6 +13,8 @@ Testing: pytest-cov
 All features offered by the coverage package should work, either through pytest-cov’s
 command-line options or through coverage’s config file.
 
+For more information visit https://pytest-cov.readthedocs.io/en/latest/readme.html
+
 Installation
 ------------
 
