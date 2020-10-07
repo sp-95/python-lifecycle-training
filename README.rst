@@ -137,13 +137,14 @@ We can represent all these tests by a single test method with different test par
 
 
     @pytest.mark.parametrize(
-        "a, b", [
+        "a, b",
+        [
             (1, 2),
             (-1, -2),
             (1, -2),
             (0.1, 0.2),
             ("hello ", "world"),
-        ]
+        ],
     )
     def test_add(a, b):
         expected = a + b
