@@ -110,7 +110,7 @@ Now run the tests again.
 
     $ pytest
 
-.. image:: docs/_static/pytest/img/simple-add-variations-fixed.png
+.. image:: docs/_static/pytest/img/simple-add-variations-fix.png
    :alt: Different tests for simple addition after fix
 
 All tests have passed. Congratulations!
