@@ -59,3 +59,27 @@ HTML report:
    :alt: HTML report of pytest coverage
 
 .. note:: You can replace pytest and coverage with pytest-cov in your dev-dependencies
+
+Pre-commit
+----------
+
+We can run tests before every commit by adding the following in
+``.pre-commit-config.yaml`` file:
+
+.. code-block:: YAML
+
+    - repo: local
+    hooks:
+      - id: install-dependencies
+        name: Install Dependencies
+        entry: poetry install
+        language: python
+        always_run: true
+        pass_filenames: false
+
+      - id: test
+        name: Run tests
+        entry: poetry run pytest --cov --cov-report=term-missing
+        language: python
+        always_run: true
+        pass_filenames: false
