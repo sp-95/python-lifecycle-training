@@ -119,3 +119,21 @@ There is, however, one more thing to notice here. The tests passed for "hello wo
 well even though we’ve explicitly said that the method add takes nothing but real
 numbers. This is because Python computes the types dynamically and type check is just a
 convention we use for the ease of code maintenance and future development.
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/test/coverage``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/test/coverage
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove pytest --dev
