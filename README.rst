@@ -70,9 +70,6 @@ Add the following in your package __init__.py file:
 If you run the command ``calc-simp 1 2`` once more you can see that your log files have
 been created in the directory ``logs``.
 
-.. note:: You can remove the variable ``__version__`` in your package ``__init__.py``
-    file
-
 Next Step
 ---------
 
