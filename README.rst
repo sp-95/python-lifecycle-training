@@ -27,7 +27,7 @@ Usage
 
     $ pytest --cov
 
-.. image:: docs/_static/pytest/img/pytest-cov.png
+.. image:: docs/_static/pytest-cov/img/pytest-cov.png
    :alt: Pytest coverage output
 
 Terminal report with missing line numbers:
@@ -36,7 +36,7 @@ Terminal report with missing line numbers:
 
     $ pytest --cov --cov-report=term-missing
 
-.. image:: docs/_static/pytest/img/term-missing.png
+.. image:: docs/_static/pytest-cov/img/term-missing.png
    :alt: Pytest coverage output with missing line numbers
 
 Terminal report with skip covered:
@@ -45,7 +45,7 @@ Terminal report with skip covered:
 
     $ pytest --cov --cov-report=term-missing:skip-covered
 
-.. image:: docs/_static/pytest/img/skip-covered.png
+.. image:: docs/_static/pytest-cov/img/skip-covered.png
    :alt: Pytest coverage output with skip covered
 
 HTML report:
@@ -55,7 +55,7 @@ HTML report:
     $ pytest --cov --cov-report=html
     $ chromium htmlcov/index.html
 
-.. image:: docs/_static/pytest/img/html.png
+.. image:: docs/_static/pytest-cov/img/html.png
    :alt: HTML report of pytest coverage
 
 .. note:: You can replace pytest and coverage with pytest-cov in your dev-dependencies
