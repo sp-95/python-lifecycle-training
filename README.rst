@@ -82,25 +82,25 @@ tests. Create ``test_complex.py`` to start writing tests for the complex calcula
 
     import pytest
 
-    from python_lifecycle_training.calculator import complex
+    from python_lifecycle_training.calculator.complex import Calculator
 
 
     class TestCalculator:
         @staticmethod
         def test_add():
-            assert complex.Calculator.add(1, 2) == 3
+            assert Calculator.add(1, 2) == 3
 
         @staticmethod
         def test_sub():
-            assert complex.Calculator.sub(2, 1) == 1
+            assert Calculator.sub(2, 1) == 1
 
         @staticmethod
         def test_mul():
-            assert complex.Calculator.mul(1, 2) == 2
+            assert Calculator.mul(1, 2) == 2
 
         @staticmethod
         def test_div():
-            assert complex.Calculator.div(2, 1) == pytest.approx(2)
+            assert Calculator.div(2, 1) == pytest.approx(2)
 
 Run tests
 
@@ -122,7 +122,7 @@ context manager.
     @staticmethod
     def test_div_by_zero():
         with pytest.raises(ZeroDivisionError) as excinfo:
-            complex.Calculator.div(2, 0)
+            assert Calculator.div(a, b) is None
         assert str(excinfo.value) == "division by zero"
 
 Run tests
@@ -161,6 +161,7 @@ server. Let's write a warning when we encounter this problem.
                     return a / b
                 except ZeroDivisionError as e:
                     warnings.warn(str(e), RuntimeWarning)
+                    return 0
             else:
                 return a / b
 
@@ -175,12 +176,12 @@ similar to ``raises``.
     def test_div_by_zero():
         python_lifecycle_training.ENV = "development"
         with pytest.raises(ZeroDivisionError) as excinfo:
-            complex.Calculator.div(2, 0)
+            assert Calculator.div(a, b) is None
         assert str(excinfo.value) == "division by zero"
 
         python_lifecycle_training.ENV = "production"
         with pytest.warns(RuntimeWarning) as record:
-            complex.Calculator.div(2, 0)
+            assert Calculator.div(a, b) == 0
         assert str(record[0].message) == "division by zero"
 
 Run tests
@@ -240,3 +241,26 @@ Run tests
 
 .. image:: docs/_static/pytest/img/log-test.png
    :alt: Test for logs
+
+Next Step
+---------
+
+#. Write tests for the broken calculator
+#. Write parameterized test for the method ``test_div``
+#. Write parameterized test to test log for both "development" and "production"
+   environments
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/test/tox``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/test/tox
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove pytest-cov --dev
