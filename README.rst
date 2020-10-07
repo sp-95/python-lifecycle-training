@@ -69,22 +69,24 @@ Let us create a broken calculator to see how dynaconf works.
 
 
     class BrokenCalculator(Calculator):
-        def __init__(self):
-            offset = settings.offset
-            logger.info(f"Offset: {offset}")
-            self.offset = offset
+        offset = settings.offset
+        logger.info(f"Offset: {offset}")
 
-        def add(self, a, b):
-            return super(BrokenCalculator, self).add(a, b) - self.offset
+        @classmethod
+        def add(cls, a, b):
+            return super(BrokenCalculator, cls).add(a, b) - cls.offset
 
-        def sub(self, a, b):
-            return super(BrokenCalculator, self).sub(a, b) - self.offset
+        @classmethod
+        def sub(cls, a, b):
+            return super(BrokenCalculator, cls).sub(a, b) - cls.offset
 
-        def mul(self, a, b):
-            return super(BrokenCalculator, self).mul(a, b) - self.offset
+        @classmethod
+        def mul(cls, a, b):
+            return super(BrokenCalculator, cls).mul(a, b) - cls.offset
 
-        def div(self, a, b):
-            return super(BrokenCalculator, self).div(a, b) - self.offset
+        @classmethod
+        def div(cls, a, b):
+            return super(BrokenCalculator, cls).div(a, b) - cls.offset
 
 
     def main():
@@ -171,11 +173,10 @@ Log the ``name`` of the user running the broken calculator
 
 .. code-block:: python
 
-    def __init__(self):
+    class BrokenCalculator(Calculator):
         offset = settings.offset
         logger.info(f"Offset: {offset}")
         logger.info(f"Set by: {settings.name}")
-        self.offset = offset
 
 Run command
 
@@ -225,12 +226,10 @@ Update the broken calculator
 
 
     class BrokenCalculator(Calculator):
-        def __init__(self):
-            with settings.using_env(python_lifecycle_training.ENV):
-                offset = settings.offset
-                logger.info(f"Offset: {offset}")
-                logger.info(f"Set by: {settings.name}")
-                self.offset = offset
+        with settings.using_env(python_lifecycle_training.ENV):
+            offset = settings.offset
+            logger.info(f"Offset: {offset}")
+            logger.info(f"Set by: {settings.name}")
 
 Create a common CLI
 
