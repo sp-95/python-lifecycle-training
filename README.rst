@@ -88,3 +88,21 @@ missed lines:
 
 .. image:: docs/_static/coverage/img/html.png
    :alt: Coverage HTML report
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``setup/test/pytest-cov``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout setup/test/pytest-cov
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove coverage --dev
