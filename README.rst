@@ -68,18 +68,16 @@ We can run tests before every commit by adding the following in
 
 .. code-block:: YAML
 
-    - repo: local
-    hooks:
-      - id: install-dependencies
-        name: Install Dependencies
-        entry: poetry install
-        language: python
-        always_run: true
-        pass_filenames: false
+      - repo: local
+        hooks:
+          - id: install-dependencies
+            name: Install Dependencies
+            entry: poetry install
+            always_run: true
+            pass_filenames: false
 
-      - id: test
-        name: Run tests
-        entry: poetry run pytest --cov --cov-report=term-missing
-        language: python
-        always_run: true
-        pass_filenames: false
+          - id: test
+            name: Run tests
+            entry: poetry run pytest --cov --cov-report=term-missing
+            always_run: true
+            pass_filenames: false
