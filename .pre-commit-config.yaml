@@ -88,3 +88,19 @@ repos:
     rev: 2.1.2
     hooks:
       - id: prettier
+
+  - repo: local
+    hooks:
+      - id: install-dependencies
+        name: Install Dependencies
+        entry: poetry install
+        language: python
+        always_run: true
+        pass_filenames: false
+
+      - id: test
+        name: Run tests
+        entry: poetry run pytest
+        language: python
+        always_run: true
+        pass_filenames: false
