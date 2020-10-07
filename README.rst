@@ -154,6 +154,30 @@ We can represent all these tests by a single test method with different test par
 
         assert simple.add(a, b) == expected
 
+Pre-commit
+----------
+
+We can run tests before every commit by adding the following in
+``.pre-commit-config.yaml`` file:
+
+.. code-block:: YAML
+
+      - repo: local
+        hooks:
+          - id: install-dependencies
+            name: Install Dependencies
+            entry: poetry install
+            language: python
+            always_run: true
+            pass_filenames: false
+
+          - id: test
+            name: Run tests
+            entry: poetry run pytest
+            language: python
+            always_run: true
+            pass_filenames: false
+
 Next Step
 ---------
 
