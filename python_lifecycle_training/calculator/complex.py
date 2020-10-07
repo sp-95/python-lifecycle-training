@@ -1,5 +1,9 @@
+import warnings
+
 import fire
 from loguru import logger
+
+import python_lifecycle_training
 
 
 class Calculator:
@@ -21,7 +25,14 @@ class Calculator:
     @staticmethod
     def div(a, b):
         logger.info(f"Dividing {a} by {b}")
-        return a / b
+        if python_lifecycle_training.ENV == "production":
+            try:
+                return a / b
+            except ZeroDivisionError as e:
+                warnings.warn(str(e), RuntimeWarning)
+                return 0
+        else:
+            return a / b
 
 
 def main():
