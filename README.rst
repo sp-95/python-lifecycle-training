@@ -55,3 +55,21 @@ Usage
 
 .. image:: docs/_static/tox/img/tox.png
    :alt: Tox
+
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``deploy/docs/sphinx``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout deploy/docs/sphinx
+
+Uninstall
+---------
+
+.. code-block:: console
+
+    $ poetry remove tox --dev
