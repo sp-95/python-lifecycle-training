@@ -34,6 +34,7 @@ Create a ``setup.cfg`` file and add the following:
     max-line-length = 88
     max-complexity = 10
     show-source = true
+    extend-ignore = E203, W503
     per-file-ignores =
         # imported but unused
         __init__.py: F401
