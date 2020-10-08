@@ -108,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gh-pages.html">Continuous Integration: GitHub Actions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Continuous Integration: GitHub Actions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#package-hosting-pypi">Package Hosting: PyPi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-description">Project Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#token-setup">Token Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-token-to-your-project">Add Token to your Project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sample-configuration">Sample Configuration</a></li>
@@ -201,6 +202,39 @@
 <h1>Continuous Integration: GitHub Actions<a class="headerlink" href="#continuous-integration-github-actions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="package-hosting-pypi">
 <h2>Package Hosting: PyPi<a class="headerlink" href="#package-hosting-pypi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-description">
+<h3>Project Description<a class="headerlink" href="#project-description" title="Permalink to this headline">¶</a></h3>
+<p>Add some description for your project.</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">&quot;python-lifecycle-training&quot;</span>
+<span class="na">version</span> <span class="o">=</span> <span class="s">&quot;0.1.0&quot;</span>
+<span class="na">repository</span> <span class="o">=</span> <span class="s">&quot;https://github.com/sp-fm/python-lifecycle-training&quot;</span>
+<span class="na">documentation</span> <span class="o">=</span> <span class="s">&quot;https://sp-fm.github.io/python-lifecycle-training/&quot;</span>
+<span class="na">description</span> <span class="o">=</span> <span class="s">&quot;A training program to learn the Python Development Cycle&quot;</span>
+<span class="na">authors</span> <span class="o">=</span> <span class="s">[&quot;Shashanka Prajapati &lt;shashanka@fusemachines.com&gt;&quot;]</span>
+<span class="na">readme</span> <span class="o">=</span> <span class="s">&quot;README.rst&quot;</span>
+<span class="na">license</span> <span class="o">=</span>  <span class="s">&quot;MIT license&quot;</span>
+<span class="na">keywords</span> <span class="o">=</span> <span class="s">[]</span>
+<span class="na">classifiers</span> <span class="o">=</span> <span class="s">[</span>
+<span class="s">    &quot;Development Status :: 2 - Pre-Alpha&quot;,</span>
+<span class="s">    &quot;Intended Audience :: Developers&quot;,</span>
+<span class="s">    &quot;License :: OSI Approved :: MIT License&quot;,</span>
+<span class="s">    &quot;Natural Language :: English&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3 :: Only&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3.7&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3.8&quot;,</span>
+<span class="na">]</span>
+<span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
+<span class="s">    { include = &quot;python_lifecycle_training&quot; },</span>
+<span class="s">    { include = &quot;tests&quot;, format = &quot;sdist&quot; },</span>
+<span class="na">]</span>
+
+<span class="k">[tool.poetry.urls]</span>
+<span class="na">&quot;Bug Tracker&quot;</span> <span class="o">=</span> <span class="s">&quot;https://github.com/sp-fm/python-lifecycle-training/issues&quot;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="token-setup">
 <h3>Token Setup<a class="headerlink" href="#token-setup" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
