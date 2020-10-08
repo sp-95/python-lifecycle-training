@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-lifecycle-training"
-version = "0.1.0"
+version = "0.1.1"
 repository = "https://github.com/sp-fm/python-lifecycle-training"
 documentation = "https://sp-fm.github.io/python-lifecycle-training/"
 description = "A training program to learn the Python Development Cycle"
