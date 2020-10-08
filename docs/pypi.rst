@@ -5,6 +5,41 @@ Continuous Integration: GitHub Actions
 Package Hosting: PyPi
 ---------------------
 
+Project Description
+~~~~~~~~~~~~~~~~~~~
+
+Add some description for your project.
+
+.. code-block:: cfg
+
+    [tool.poetry]
+    name = "python-lifecycle-training"
+    version = "0.1.0"
+    repository = "https://github.com/sp-fm/python-lifecycle-training"
+    documentation = "https://sp-fm.github.io/python-lifecycle-training/"
+    description = "A training program to learn the Python Development Cycle"
+    authors = ["Shashanka Prajapati <shashanka@fusemachines.com>"]
+    readme = "README.rst"
+    license =  "MIT license"
+    keywords = []
+    classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ]
+    packages = [
+        { include = "python_lifecycle_training" },
+        { include = "tests", format = "sdist" },
+    ]
+
+    [tool.poetry.urls]
+    "Bug Tracker" = "https://github.com/sp-fm/python-lifecycle-training/issues"
+
 Token Setup
 ~~~~~~~~~~~
 
@@ -105,7 +140,6 @@ Release
 
 .. note:: Generally a pre-release is published until it’s stable. It’s published as an
    official release at a later date.
-
 
 Add a badge
 -----------
