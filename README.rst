@@ -64,7 +64,8 @@ https://github.com/sp-fm/fuse-framework which can be used as follows:
 
 .. code-block:: console
 
-    $ cookiecutter gh:sp-fm/fuse-framework
+    $ pip install fuse-framework
+    $ fuse init
 
 Hope you enjoy this training.
 
