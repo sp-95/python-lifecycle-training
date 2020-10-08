@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing: pytest &mdash; python-lifecycle-training 0.1.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Testing: coverage" href="coverage.html" />
+    <link rel="prev" title="Configuration Management: dynaconf" href="dynaconf.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> python-lifecycle-training
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Python Lifecycle Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../initialization/editorconfig.html">EditorConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/flake8.html">Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/black.html">Black</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/isort.html">isort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/mypy.html">MyPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/pre-commit.html">Pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fire.html">Command Line Interface: fire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loguru.html">Logging: loguru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynaconf.html">Configuration Management: dynaconf</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing: pytest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-feature">Advanced feature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-commit">Pre-commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coverage.html">Testing: coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytest-cov.html">Testing: pytest-cov</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tox.html">Testing: tox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/sphinx.html">Documentation: Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/gh-actions.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/gh-pages.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/pypi.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/gh-issue-templates.html">GitHub Issue Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/cookiecutter.html">Cookiecutter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">python_lifecycle_training</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pypi_release_checklist.html">PyPI Release Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">python-lifecycle-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial.html">Tutorial</a> &raquo;</li>
+        
+      <li>Testing: pytest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/setup/pytest.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="testing-pytest">
+<h1>Testing: pytest<a class="headerlink" href="#testing-pytest" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>pytest framework</strong> makes it easy to write small tests, yet scales to support
+complex functional testing for applications and libraries.</p>
+<ul class="simple">
+<li><p>Detailed info on failing assert statements (no need to remember self.assert* names)</p></li>
+<li><p>Auto-discovery of test modules and functions</p></li>
+<li><p>Modular fixtures for managing small or parametrized long-lived test resources</p></li>
+<li><p>Can run unittest (including trial) and nose test suites out of the box</p></li>
+<li><p>Python 3.5+ and PyPy 3</p></li>
+<li><p>Rich plugin architecture, with over 315+ external plugins and thriving community</p></li>
+</ul>
+<p>For more information visit <a class="reference external" href="https://docs.pytest.org/en/stable/">https://docs.pytest.org/en/stable/</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add pytest --dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Add the following in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>:</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.pytest.ini_options]</span>
+<span class="na">testpaths</span> <span class="o">=</span> <span class="s">&quot;tests&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Let’s write a test for the simple calculator in <code class="docutils literal notranslate"><span class="pre">test_simple.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">python_lifecycle.calculator</span> <span class="kn">import</span> <span class="n">simple</span>
+
+
+<span class="k">def</span> <span class="nf">test_add</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can replace the version test and remove the variable <code class="docutils literal notranslate"><span class="pre">__version__</span></code> from
+your package init file</p>
+</div>
+<p>To execute pytest run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Simple addition test" src="../_images/simple-add.png" />
+<p><strong>pytest</strong> will run all files of the form <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> or <code class="docutils literal notranslate"><span class="pre">*_test.py</span></code> in the current
+directory and its subdirectories. Thus we can write any sort of tests we want.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">python_lifecycle_training.calculator</span> <span class="kn">import</span> <span class="n">simple</span>
+
+
+<span class="k">def</span> <span class="nf">test_add_positives</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+
+<span class="k">def</span> <span class="nf">test_add_negatives</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">3</span>
+
+
+<span class="k">def</span> <span class="nf">test_add_mixed</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">test_add_float</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.3</span>
+
+
+<span class="k">def</span> <span class="nf">test_add_str</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;hello &quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;hello world&quot;</span>
+</pre></div>
+</div>
+<p>Run test:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Different tests for simple addition" src="../_images/simple-add-variations.png" />
+<p>Whoops! Something doesn’t seem right.</p>
+<p>We need to handle <cite>float</cite> values a little differently when writing tests. We just need
+to check whether the value obtained is close enough.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="k">def</span> <span class="nf">test_add_float</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now run the tests again.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Different tests for simple addition after fix" src="../_images/simple-add-variations-fix.png" />
+<p>All tests have passed. Congratulations!</p>
+<p>There is, however, one more thing to notice here. The tests passed for “hello world” as
+well even though we’ve explicitly said that the method add takes nothing but real
+numbers. This is because Python computes the types dynamically and type check is just a
+convention we use for the ease of code maintenance and future development.</p>
+</div>
+<div class="section" id="advanced-feature">
+<h2>Advanced feature<a class="headerlink" href="#advanced-feature" title="Permalink to this headline">¶</a></h2>
+<p>We can represent all these tests by a single test method with different test params.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">python_lifecycle_training.calculator</span> <span class="kn">import</span> <span class="n">simple</span>
+
+
+<span class="k">def</span> <span class="nf">isfloat</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;a, b&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;hello &quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">isfloat</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))):</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">simple</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pre-commit">
+<h2>Pre-commit<a class="headerlink" href="#pre-commit" title="Permalink to this headline">¶</a></h2>
+<p>We can run tests before every commit by adding the following in
+<code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> file:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">repo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+  <span class="nt">hooks</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">install-dependencies</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
+      <span class="nt">entry</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">poetry install</span>
+      <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+      <span class="nt">always_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">pass_filenames</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Run tests</span>
+      <span class="nt">entry</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">poetry run pytest</span>
+      <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+      <span class="nt">always_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">pass_filenames</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<p>To move on to the next step commit or stash your changes then checkout to the branch
+<code class="docutils literal notranslate"><span class="pre">setup/test/coverage</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git stash
+<span class="gp">$</span> git checkout setup/test/coverage
+</pre></div>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry remove pytest --dev
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="coverage.html" class="btn btn-neutral float-right" title="Testing: coverage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dynaconf.html" class="btn btn-neutral float-left" title="Configuration Management: dynaconf" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Shashanka Prajapati
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

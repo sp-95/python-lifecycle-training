@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Continuous Integration: GitHub Actions &mdash; python-lifecycle-training 0.1.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GitHub Issue Templates" href="../miscellaneous/gh-issue-templates.html" />
+    <link rel="prev" title="Continuous Integration: GitHub Actions" href="gh-pages.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> python-lifecycle-training
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Python Lifecycle Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../initialization/editorconfig.html">EditorConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/flake8.html">Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/black.html">Black</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/isort.html">isort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/mypy.html">MyPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/pre-commit.html">Pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/fire.html">Command Line Interface: fire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/loguru.html">Logging: loguru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/dynaconf.html">Configuration Management: dynaconf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/pytest.html">Testing: pytest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/coverage.html">Testing: coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/pytest-cov.html">Testing: pytest-cov</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/tox.html">Testing: tox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx.html">Documentation: Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gh-actions.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gh-pages.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Continuous Integration: GitHub Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#package-hosting-pypi">Package Hosting: PyPi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-description">Project Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#token-setup">Token Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-token-to-your-project">Add Token to your Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-configuration">Sample Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tagged-commit">Tagged Commit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#release">Release</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-badge">Add a badge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/gh-issue-templates.html">GitHub Issue Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/cookiecutter.html">Cookiecutter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">python_lifecycle_training</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pypi_release_checklist.html">PyPI Release Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">python-lifecycle-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial.html">Tutorial</a> &raquo;</li>
+        
+      <li>Continuous Integration: GitHub Actions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deployment/pypi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="continuous-integration-github-actions">
+<h1>Continuous Integration: GitHub Actions<a class="headerlink" href="#continuous-integration-github-actions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="package-hosting-pypi">
+<h2>Package Hosting: PyPi<a class="headerlink" href="#package-hosting-pypi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-description">
+<h3>Project Description<a class="headerlink" href="#project-description" title="Permalink to this headline">¶</a></h3>
+<p>Add some description for your project.</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">&quot;python-lifecycle-training&quot;</span>
+<span class="na">version</span> <span class="o">=</span> <span class="s">&quot;0.1.0&quot;</span>
+<span class="na">repository</span> <span class="o">=</span> <span class="s">&quot;https://github.com/sp-fm/python-lifecycle-training&quot;</span>
+<span class="na">documentation</span> <span class="o">=</span> <span class="s">&quot;https://sp-fm.github.io/python-lifecycle-training/&quot;</span>
+<span class="na">description</span> <span class="o">=</span> <span class="s">&quot;A training program to learn the Python Development Cycle&quot;</span>
+<span class="na">authors</span> <span class="o">=</span> <span class="s">[&quot;Shashanka Prajapati &lt;shashanka@fusemachines.com&gt;&quot;]</span>
+<span class="na">readme</span> <span class="o">=</span> <span class="s">&quot;README.rst&quot;</span>
+<span class="na">license</span> <span class="o">=</span>  <span class="s">&quot;MIT license&quot;</span>
+<span class="na">keywords</span> <span class="o">=</span> <span class="s">[]</span>
+<span class="na">classifiers</span> <span class="o">=</span> <span class="s">[</span>
+<span class="s">    &quot;Development Status :: 2 - Pre-Alpha&quot;,</span>
+<span class="s">    &quot;Intended Audience :: Developers&quot;,</span>
+<span class="s">    &quot;License :: OSI Approved :: MIT License&quot;,</span>
+<span class="s">    &quot;Natural Language :: English&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3 :: Only&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3.7&quot;,</span>
+<span class="s">    &quot;Programming Language :: Python :: 3.8&quot;,</span>
+<span class="na">]</span>
+<span class="na">packages</span> <span class="o">=</span> <span class="s">[</span>
+<span class="s">    { include = &quot;python_lifecycle_training&quot; },</span>
+<span class="s">    { include = &quot;tests&quot;, format = &quot;sdist&quot; },</span>
+<span class="na">]</span>
+
+<span class="k">[tool.poetry.urls]</span>
+<span class="na">&quot;Bug Tracker&quot;</span> <span class="o">=</span> <span class="s">&quot;https://github.com/sp-fm/python-lifecycle-training/issues&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="token-setup">
+<h3>Token Setup<a class="headerlink" href="#token-setup" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Create a PyPi account if you don’t have one.</p></li>
+<li><p>Goto <strong>Account Settings</strong> from the top right corner</p></li>
+<li><p>Click <strong>Add API token</strong></p></li>
+<li><p>Set the <strong>Token name</strong> and <strong>Scope</strong></p></li>
+<li><p>Click <strong>Add token</strong></p></li>
+</ul>
+<p><strong>IMPORTANT NOTICE</strong>: Save this token ID somewhere very safe as it represents your PyPi
+identity. You’ll need this to deploy packages. If you lose it then you’ll have to
+generate a new one. If others get hold of this token then they can host packages in
+your name.</p>
+</div>
+<div class="section" id="add-token-to-your-project">
+<h3>Add Token to your Project<a class="headerlink" href="#add-token-to-your-project" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to your project settings</p></li>
+<li><p>Click on <strong>Secrets</strong></p></li>
+<li><p>Click on <strong>New secret</strong></p></li>
+<li><p>Add your token as PYPI_TOKEN</p></li>
+</ul>
+</div>
+<div class="section" id="sample-configuration">
+<h3>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="c1">#.github/workflows/upload-python-package.yml</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Release</span>
+
+<span class="nt">on</span><span class="p">:</span>
+  <span class="nt">release</span><span class="p">:</span>
+    <span class="nt">types</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">created</span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">deploy</span><span class="p">:</span>
+    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+        <span class="nt">with</span><span class="p">:</span>
+          <span class="nt">python-version</span><span class="p">:</span> <span class="s">&quot;3.x&quot;</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Get full python version</span>
+        <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">full-python-version</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo ::set-output name=version::$(python -c &quot;import sys; print(&#39;-&#39;.join(str(v) for v in sys.version_info[:3]))&quot;)</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install and set up Poetry</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+          <span class="no">python -m pip install --upgrade pip</span>
+          <span class="no">pip install --upgrade poetry --pre</span>
+          <span class="no">poetry config virtualenvs.in-project true</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up cache</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/cache@v1</span>
+        <span class="nt">with</span><span class="p">:</span>
+          <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.venv</span>
+          <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles(&#39;**/poetry.lock&#39;) }}</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">poetry install</span>
+
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build and publish</span>
+        <span class="nt">env</span><span class="p">:</span>
+          <span class="nt">PYPI_TOKEN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.PYPI_TOKEN }}</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+          <span class="no">poetry config pypi-token.pypi $PYPI_TOKEN</span>
+          <span class="no">poetry publish --build</span>
+</pre></div>
+</div>
+<p>Most of the commands meant for PyPi hosting are handled by poetry.</p>
+</div>
+<div class="section" id="tagged-commit">
+<h3>Tagged Commit<a class="headerlink" href="#tagged-commit" title="Permalink to this headline">¶</a></h3>
+<p>When you push a tag to GitHub it’s called as a tagged commit.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry version minor
+<span class="gp">$</span> git add pyproject.toml
+<span class="gp">$</span> git commit -m <span class="s2">&quot;chore: bump version from 0.1.0 to 0.2.0&quot;</span>
+<span class="gp">$</span> git tag <span class="sb">`</span>poetry version -s<span class="sb">`</span>
+<span class="gp">$</span> git push --tags
+</pre></div>
+</div>
+</div>
+<div class="section" id="release">
+<h3>Release<a class="headerlink" href="#release" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Click on tags in your project repo</p></li>
+<li><p>Go to Releases</p></li>
+<li><p>Draft a new release</p></li>
+<li><p>Add the tag version, release title, and the description. You can edit the PR
+description</p></li>
+<li><p>Click on Publish Release</p></li>
+<li><p>Check if your package is there in PyPi</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generally a pre-release is published until it’s stable. It’s published as an
+official release at a later date.</p>
+</div>
+</div>
+</div>
+<div class="section" id="add-a-badge">
+<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this headline">¶</a></h2>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/python-lifecycle-training"><img alt="Release" src="https://github.com/sp-fm/python-lifecycle-training/workflows/Release/badge.svg" /></a>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://github.com/sp-fm/python-lifecycle-training/workflows/Release/badge.svg
+    <span class="nc">:target:</span> https://pypi.python.org/pypi/python-lifecycle-training
+    <span class="nc">:alt:</span> Release
+</pre></div>
+</div>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/python-lifecycle-training"><img alt="PyPi Version" src="https://img.shields.io/pypi/v/python-lifecycle-training.svg" /></a>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://img.shields.io/pypi/v/python-lifecycle-training.svg
+    <span class="nc">:target:</span> https://pypi.python.org/pypi/python-lifecycle-training
+    <span class="nc">:alt:</span> PyPi Version
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../miscellaneous/gh-issue-templates.html" class="btn btn-neutral float-right" title="GitHub Issue Templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gh-pages.html" class="btn btn-neutral float-left" title="Continuous Integration: GitHub Actions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Shashanka Prajapati
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
