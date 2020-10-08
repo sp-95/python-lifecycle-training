@@ -11,33 +11,33 @@ top of the page at `GitHub Help`_.
    :maxdepth: 2
    :caption: Project Initialization
 
-    editorconfig
-    flake8
-    black
-    isort
-    mypy
-    pre-commit
+   editorconfig
+   flake8
+   black
+   isort
+   mypy
+   pre-commit
 
 .. toctree::
    :maxdepth: 2
    :caption: Project Setup
 
-    fire
-    loguru
-    dynaconf
-    pytest
-    coverage
-    pytest-cov
-    tox
+   fire
+   loguru
+   dynaconf
+   pytest
+   coverage
+   pytest-cov
+   tox
 
 .. toctree::
    :maxdepth: 2
    :caption: Project Deployment
 
-    sphinx
-    gh-actions
-    gh-pages
-    pypi
+   sphinx
+   gh-actions
+   gh-pages
+   pypi
 
 .. note:: Did you find any of these instructions confusing? `Edit this file`_
           and submit a pull request with your improvements!
