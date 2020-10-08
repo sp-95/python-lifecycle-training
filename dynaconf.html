@@ -236,7 +236,7 @@ storage.</p></li>
 <span class="gp">$</span> dynaconf init -p configs -f yaml
 </pre></div>
 </div>
-<img alt="Dynaconf initialization" src="docs/_static/dynaconf/img/init.png" />
+<img alt="Dynaconf initialization" src="_images/init.png" />
 <p>This command creates the following files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 ├── configs/
@@ -303,7 +303,7 @@ storage.</p></li>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> calc-broken add <span class="m">2</span> <span class="m">2</span>
 </pre></div>
 </div>
-<img alt="Broken Calculator" src="docs/_static/dynaconf/img/run.png" />
+<img alt="Broken Calculator" src="_images/run1.png" />
 <div class="section" id="environment-variables">
 <h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h3>
 <p>Dynaconf prioritizes environment variables over files as the best recommendation to keep
@@ -313,7 +313,7 @@ prefixed by <code class="docutils literal notranslate"><span class="pre">DYNACON
 <span class="gp">$</span> calc-broken add <span class="m">2</span> <span class="m">2</span>
 </pre></div>
 </div>
-<img alt="Broken Calculator with offset from environment" src="docs/_static/dynaconf/img/env-offset.png" />
+<img alt="Broken Calculator with offset from environment" src="_images/env-offset.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To unset the variable run <code class="docutils literal notranslate"><span class="pre">unset</span> <span class="pre">DYNACONF_OFFSET</span></code></p>
@@ -357,7 +357,7 @@ prefixed by <code class="docutils literal notranslate"><span class="pre">DYNACON
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> calc-broken add <span class="m">2</span> <span class="m">2</span>
 </pre></div>
 </div>
-<img alt="Switching Environment" src="docs/_static/dynaconf/img/use-env-dev.png" />
+<img alt="Switching Environment" src="_images/use-env-dev.png" />
 <p>Dynaconf sets the default environment to <code class="docutils literal notranslate"><span class="pre">development</span></code>.</p>
 <p>The subsequent workspace inherits the configurations of the upper workspace unless
 replaced. Thus, we could access the offset in <code class="docutils literal notranslate"><span class="pre">development</span></code> even though we didn’t
@@ -369,7 +369,7 @@ specify it explicitly.</p>
 <span class="gp">$</span> calc-broken add <span class="m">2</span> <span class="m">2</span>
 </pre></div>
 </div>
-<img alt="Broken Calculator" src="docs/_static/dynaconf/img/use-env-prod.png" />
+<img alt="Broken Calculator" src="_images/use-env-prod.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unset <cite>ENV_FOR_DYNACONF</cite> using <code class="docutils literal notranslate"><span class="pre">unset</span> <span class="pre">ENV_FOR_DYNACONF</span></code></p>
@@ -431,7 +431,7 @@ specify it explicitly.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> calc broken add <span class="m">2</span> <span class="m">2</span> --env<span class="o">=</span>production
 </pre></div>
 </div>
-<img alt="Broken Calculator" src="docs/_static/dynaconf/img/cli-env-prod.png" />
+<img alt="Broken Calculator" src="_images/cli-env-prod.png" />
 <p>You can switch also between existing environments using:</p>
 <ul>
 <li><p>from_env: Will create a new settings instance pointing to defined env. You can use

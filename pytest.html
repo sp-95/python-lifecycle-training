@@ -241,7 +241,7 @@ your package init file</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
 </pre></div>
 </div>
-<img alt="Simple addition test" src="docs/_static/pytest/img/simple-add.png" />
+<img alt="Simple addition test" src="_images/simple-add.png" />
 <p><strong>pytest</strong> will run all files of the form <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code> or <code class="docutils literal notranslate"><span class="pre">*_test.py</span></code> in the current
 directory and its subdirectories. Thus we can write any sort of tests we want.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">python_lifecycle_training.calculator</span> <span class="kn">import</span> <span class="n">simple</span>
@@ -271,7 +271,7 @@ directory and its subdirectories. Thus we can write any sort of tests we want.</
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
 </pre></div>
 </div>
-<img alt="Different tests for simple addition" src="docs/_static/pytest/img/simple-add-variations.png" />
+<img alt="Different tests for simple addition" src="_images/simple-add-variations.png" />
 <p>Whoops! Something doesn’t seem right.</p>
 <p>We need to handle <cite>float</cite> values a little differently when writing tests. We just need
 to check whether the value obtained is close enough.</p>
@@ -285,7 +285,7 @@ to check whether the value obtained is close enough.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
 </pre></div>
 </div>
-<img alt="Different tests for simple addition after fix" src="docs/_static/pytest/img/simple-add-variations-fix.png" />
+<img alt="Different tests for simple addition after fix" src="_images/simple-add-variations-fix.png" />
 <p>All tests have passed. Congratulations!</p>
 <p>There is, however, one more thing to notice here. The tests passed for “hello world” as
 well even though we’ve explicitly said that the method add takes nothing but real
