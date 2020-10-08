@@ -11,33 +11,40 @@ top of the page at `GitHub Help`_.
    :maxdepth: 2
    :caption: Project Initialization
 
-   editorconfig
-   flake8
-   black
-   isort
-   mypy
-   pre-commit
+   initialization/editorconfig
+   initialization/flake8
+   initialization/black
+   initialization/isort
+   initialization/mypy
+   initialization/pre-commit
 
 .. toctree::
    :maxdepth: 2
    :caption: Project Setup
 
-   fire
-   loguru
-   dynaconf
-   pytest
-   coverage
-   pytest-cov
-   tox
+   setup/fire
+   setup/loguru
+   setup/dynaconf
+   setup/pytest
+   setup/coverage
+   setup/pytest-cov
+   setup/tox
 
 .. toctree::
    :maxdepth: 2
    :caption: Project Deployment
 
-   sphinx
-   gh-actions
-   gh-pages
-   pypi
+   deployment/sphinx
+   deployment/gh-actions
+   deployment/gh-pages
+   deployment/pypi
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Miscellaneous
+
+   miscellaneous/gh-issue-templates
+   miscellaneous/cookiecutter
 
 .. _GitHub account: https://github.com/
 .. _PyPI: https://pypi.python.org/pypi

@@ -53,7 +53,7 @@ Usage
 
     $ tox
 
-.. image:: ../docs/_static/tox/img/tox.png
+.. image:: ../_static/tox/img/tox.png
    :alt: Tox
 
 Next Step

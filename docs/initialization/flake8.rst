@@ -46,7 +46,7 @@ Usage
 
     $ flake8 python_lifecycle tests
 
-.. image:: ../docs/_static/flake8/img/usage.png
+.. image:: ../_static/flake8/img/usage.png
     :alt: Flake8 output
 
 Next Step

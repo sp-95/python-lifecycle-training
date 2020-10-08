@@ -57,7 +57,14 @@ Project Deployment
 * gh-pages_
 * pypi_
 
-For more information check out the tutorial_.
+For more information check out the full tutorial_.
+
+You can find the template for all the tools mentioned in this training at
+https://github.com/sp-fm/fuse-framework which can be used as follows:
+
+.. code-block:: console
+
+    $ cookiecutter gh:sp-fm/fuse-framework
 
 Hope you enjoy this training.
 
