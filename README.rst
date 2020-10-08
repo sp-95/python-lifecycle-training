@@ -9,7 +9,7 @@ Setup GitHub Pages
 ~~~~~~~~~~~~~~~~~~
 
 We will be hosting our documents on GitHub Pages. In order to start hosting to GitHub
-Pages we must first `create a GitHub Pages site`_.
+Pages you must first `create a GitHub Pages site`_ if you haven't set it up before.
 
 Generate Docs
 ~~~~~~~~~~~~~
@@ -89,8 +89,14 @@ Sample Configuration
 Create one more pull request and merge your changes to master. Check the actions tab
 once your changes have been merged.
 
-Once the Documentation test passes check the site you'll be able to find your
-documentation at https://sp-fm.github.io/python-lifecycle-training
+Once the Documentation test passes do the following:
+
+* Go to your project **Settings**
+* Go to **GitHub Pages** section
+* Set your Source to **Branch: gh-pages**
+* Click **Save**
+* You can now visit https://sp-fm.github.io/python-lifecycle-training to view the
+  documentation
 
 Add a badge
 -----------
