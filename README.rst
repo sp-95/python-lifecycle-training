@@ -39,7 +39,7 @@ this process easier let's create a Makefile.
         @python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
     docs: ## generate Sphinx HTML documentation, including API docs
-        rm -f docs/python_lifecycle_training.rst
+        rm -f docs/python_lifecycle_training*.rst
         rm -f docs/modules.rst
         sphinx-apidoc -o docs/ python_lifecycle_training
         $(MAKE) -C docs clean
