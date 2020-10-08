@@ -39,10 +39,6 @@ top of the page at `GitHub Help`_.
    gh-pages
    pypi
 
-.. note:: Did you find any of these instructions confusing? `Edit this file`_
-          and submit a pull request with your improvements!
-
 .. _GitHub account: https://github.com/
 .. _PyPI: https://pypi.python.org/pypi
 .. _GitHub Help: https://help.github.com/
-.. _Edit this file: https://github.com/sp-fm/fuse-framework/blob/master/docs/tutorial.rst
