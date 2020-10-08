@@ -1,0 +1,10 @@
+default:
+  name: ""
+  offset: 1
+
+development:
+  name: developer
+
+production:
+  offset: 0
+  name: admin
