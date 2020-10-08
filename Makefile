@@ -18,9 +18,9 @@ help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/fuse_utils.rst
+	rm -f docs/python_lifecycle_training.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ fuse_utils
+	sphinx-apidoc -o docs/ python_lifecycle_training
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
