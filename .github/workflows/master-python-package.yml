@@ -44,6 +44,8 @@ jobs:
         run: poetry install
 
       - name: Run pre-commit action
+        env:
+          SKIP: no-commit-to-branch
         uses: pre-commit/action@v2.0.0
 
       - name: Run Tox
