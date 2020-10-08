@@ -329,12 +329,12 @@ Next Step
 ---------
 
 To move on to the next step commit or stash your changes then checkout to the branch
-``deploy/ci/github-actions``
+``deploy/ci/test``
 
 .. code-block:: console
 
     $ git stash
-    $ git checkout deploy/ci/github-actions
+    $ git checkout deploy/ci/test
 
 Uninstall
 ---------
