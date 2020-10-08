@@ -1,0 +1,45 @@
+python\_lifecycle\_training.calculator package
+==============================================
+
+Submodules
+----------
+
+python\_lifecycle\_training.calculator.broken module
+----------------------------------------------------
+
+.. automodule:: python_lifecycle_training.calculator.broken
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_lifecycle\_training.calculator.cli module
+-------------------------------------------------
+
+.. automodule:: python_lifecycle_training.calculator.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_lifecycle\_training.calculator.complex module
+-----------------------------------------------------
+
+.. automodule:: python_lifecycle_training.calculator.complex
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_lifecycle\_training.calculator.simple module
+----------------------------------------------------
+
+.. automodule:: python_lifecycle_training.calculator.simple
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: python_lifecycle_training.calculator
+   :members:
+   :undoc-members:
+   :show-inheritance:
