@@ -46,7 +46,7 @@ questions it asks you.
 
     $ sphinx-quickstart -v `poetry version -s` docs
 
-.. image:: ../docs/_static/sphinx/img/sphinx-quickstart.png
+.. image:: ../_static/sphinx/img/sphinx-quickstart.png
    :alt: Sphinx quickstart
 
 After you answer all the prompts the following files will be created::
@@ -68,7 +68,7 @@ Usage
     $ make -C docs html
     $ chromium docs/_build/html/index.html
 
-.. image:: ../docs/_static/sphinx/img/quickstart-html.png
+.. image:: ../_static/sphinx/img/quickstart-html.png
    :alt: HTML output of sphinx quickstart
 
 Theme
@@ -101,7 +101,7 @@ Clean the existing build and then build again.
     $ make -C docs html
     $ chromium docs/_build/html/index.html
 
-.. image:: ../docs/_static/sphinx/img/sphinx-rtd-theme.png
+.. image:: ../_static/sphinx/img/sphinx-rtd-theme.png
    :alt: Sphinx Read the Docs Theme
 
 Does it look better now?
@@ -169,7 +169,7 @@ Clean and build again
     $ make -C docs html
     $ chromium docs/_build/html/index.html
 
-.. image:: ../docs/_static/sphinx/img/autodoc.png
+.. image:: ../_static/sphinx/img/autodoc.png
    :alt: Sphinx auto documentation
 
 Google Docstrings
@@ -198,7 +198,7 @@ Let’s try adding a docstring in our simple calculator to see what happens
     $ make -C docs html
     $ chromium docs/_build/html/index.html
 
-.. image:: ../docs/_static/sphinx/img/google-docs.png
+.. image:: ../_static/sphinx/img/google-docs.png
    :alt: Google docstrings
 
 Something doesn’t seem right here. In order for google style docstrings to be displayed
@@ -222,7 +222,7 @@ properly we need the napoleon sphinx extension. Go ahead and add it to ``conf.py
     $ make -C docs html
     $ chromium docs/_build/html/index.html
 
-.. image:: ../docs/_static/sphinx/img/google-docs-fix.png
+.. image:: ../_static/sphinx/img/google-docs-fix.png
    :alt: Fix google docstrings
 
 This seems better, doesn’t it?

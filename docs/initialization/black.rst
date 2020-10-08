@@ -25,7 +25,7 @@ Check
 
     $ black python_lifecycle_training tests --diff --color
 
-.. image:: ../docs/_static/black/img/check.png
+.. image:: ../_static/black/img/check.png
     :alt: Colored output of black diff
 
 Usage
@@ -35,7 +35,7 @@ Usage
 
     $ black python_lifecycle_training tests
 
-.. image:: ../docs/_static/black/img/usage.png
+.. image:: ../_static/black/img/usage.png
     :alt: Black output
 
 Add a badge

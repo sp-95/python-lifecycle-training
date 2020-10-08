@@ -44,7 +44,7 @@ To see the log run:
 
     $ calc-simp 1 2
 
-.. image:: ../docs/_static/loguru/img/calc-simp.png
+.. image:: ../_static/loguru/img/calc-simp.png
     :alt: Logged output
 
 Add logs in the complex calculator in the same way.

@@ -35,7 +35,7 @@ Initialization
     $ mkdir configs
     $ dynaconf init -p configs -f yaml
 
-.. image:: ../docs/_static/dynaconf/img/init.png
+.. image:: ../_static/dynaconf/img/init.png
     :alt: Dynaconf initialization
 
 This command creates the following files::
@@ -116,7 +116,7 @@ Run the command
 
     $ calc-broken add 2 2
 
-.. image:: ../docs/_static/dynaconf/img/run.png
+.. image:: ../_static/dynaconf/img/run.png
     :alt: Broken Calculator
 
 Environment Variables
@@ -131,7 +131,7 @@ prefixed by ``DYNACONF_`` (or by the custom prefix)
     $ export DYNACONF_OFFSET=1
     $ calc-broken add 2 2
 
-.. image:: ../docs/_static/dynaconf/img/env-offset.png
+.. image:: ../_static/dynaconf/img/env-offset.png
     :alt: Broken Calculator with offset from environment
 
 .. note:: To unset the variable run ``unset DYNACONF_OFFSET``
@@ -184,7 +184,7 @@ Run command
 
     $ calc-broken add 2 2
 
-.. image:: ../docs/_static/dynaconf/img/use-env-dev.png
+.. image:: ../_static/dynaconf/img/use-env-dev.png
     :alt: Switching Environment
 
 
@@ -203,7 +203,7 @@ Switch Environment using Environment Variable
     $ export ENV_FOR_DYNACONF=production
     $ calc-broken add 2 2
 
-.. image:: ../docs/_static/dynaconf/img/use-env-prod.png
+.. image:: ../_static/dynaconf/img/use-env-prod.png
     :alt: Broken Calculator
 
 .. note:: Unset `ENV_FOR_DYNACONF` using ``unset ENV_FOR_DYNACONF``
@@ -278,7 +278,7 @@ Run command on ``production`` environment from CLI
 
     $ calc broken add 2 2 --env=production
 
-.. image:: ../docs/_static/dynaconf/img/cli-env-prod.png
+.. image:: ../_static/dynaconf/img/cli-env-prod.png
     :alt: Broken Calculator
 
 You can switch also between existing environments using:

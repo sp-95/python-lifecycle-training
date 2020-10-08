@@ -53,7 +53,7 @@ To execute pytest run:
 
     $ pytest
 
-.. image:: ../docs/_static/pytest/img/simple-add.png
+.. image:: ../_static/pytest/img/simple-add.png
    :alt: Simple addition test
 
 **pytest** will run all files of the form ``test_*.py`` or ``*_test.py`` in the current
@@ -89,7 +89,7 @@ Run test:
 
     $ pytest
 
-.. image:: ../docs/_static/pytest/img/simple-add-variations.png
+.. image:: ../_static/pytest/img/simple-add-variations.png
    :alt: Different tests for simple addition
 
 Whoops! Something doesn't seem right.
@@ -110,7 +110,7 @@ Now run the tests again.
 
     $ pytest
 
-.. image:: ../docs/_static/pytest/img/simple-add-variations-fix.png
+.. image:: ../_static/pytest/img/simple-add-variations-fix.png
    :alt: Different tests for simple addition after fix
 
 All tests have passed. Congratulations!
