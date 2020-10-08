@@ -12,14 +12,8 @@ Installation
 
 .. code-block:: console
 
-    $ pip install cookiecutter --user --upgrade
-
-Usage
------
-
-.. code-block:: console
-
-    $ cookiecutter gh:sp-fm/fuse-framework
+    $ pip install fuse-framework
+    $ fuse init
 
 This will prompt some questions related to the project that is being generated.
 
