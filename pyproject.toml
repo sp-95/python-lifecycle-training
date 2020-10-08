@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "python-lifecycle-training"
 version = "0.1.0"
-repository = "https://github.com/sp-fm/python-lifecycle-training"
-documentation = "https://sp-fm.github.io/python-lifecycle-training/"
+repository = "https://github.com/sp-95/python-lifecycle-training"
+documentation = "https://sp-95.github.io/python-lifecycle-training/"
 description = "A training program to learn the Python Development Cycle"
 authors = ["Shashanka Prajapati <shashanka@fusemachines.com>"]
 readme = "README.rst"
@@ -39,7 +39,7 @@ sphinx-rtd-theme = "^0.5.0"
 calc = "python_lifecycle_training.calculator.cli:main"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/sp-fm/python-lifecycle-training/issues"
+"Bug Tracker" = "https://github.com/sp-95/python-lifecycle-training/issues"
 
 [tool.isort]
 multi_line_output = 3

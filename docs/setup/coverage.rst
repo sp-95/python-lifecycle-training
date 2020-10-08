@@ -66,7 +66,7 @@ command starts with “python”, just replace the initial “python” with “
 
     $ coverage run -m pytest
 
-.. image:: ../docs/_static/coverage/img/run.png
+.. image:: ../_static/coverage/img/run.png
    :alt: Coverage run pytest
 
 Use ``coverage report`` to report on the results:
@@ -75,7 +75,7 @@ Use ``coverage report`` to report on the results:
 
     $ coverage report -m
 
-.. image:: ../docs/_static/coverage/img/report.png
+.. image:: ../_static/coverage/img/report.png
    :alt: Coverage report
 
 For a nicer presentation, use ``coverage html`` to get annotated HTML listings detailing
@@ -86,7 +86,7 @@ missed lines:
     $ coverage html
     $ chromium htmlcov/index.html
 
-.. image:: ../docs/_static/coverage/img/html.png
+.. image:: ../_static/coverage/img/html.png
    :alt: Coverage HTML report
 
 Next Step

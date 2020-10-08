@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for this project
 title: "[RFC] "
 labels: enhancement
-assignees: sp-fm
+assignees: sp-95
 ---
 
 **Is your feature request related to a problem? Please describe.**
