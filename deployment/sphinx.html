@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation: Sphinx &mdash; python-lifecycle-training 0.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Continuous Integration: GitHub Actions" href="gh-actions.html" />
+    <link rel="prev" title="Testing: tox" href="../setup/tox.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> python-lifecycle-training
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Python Lifecycle Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../initialization/editorconfig.html">EditorConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/flake8.html">Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/black.html">Black</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/isort.html">isort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/mypy.html">MyPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/pre-commit.html">Pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/fire.html">Command Line Interface: fire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/loguru.html">Logging: loguru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/dynaconf.html">Configuration Management: dynaconf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/pytest.html">Testing: pytest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/coverage.html">Testing: coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/pytest-cov.html">Testing: pytest-cov</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/tox.html">Testing: tox</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation: Sphinx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#theme">Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-documentation">Auto Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-docstrings">Google Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#document-build-test">Document Build Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miscellaneous">Miscellaneous</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#useful-sphinx-extensions">Useful sphinx extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dont-show-todos">Don’t show todos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#better-syntax-highlighting">Better syntax highlighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-generate-your-project-meta">Auto-generate your project meta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gh-actions.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gh-pages.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/gh-issue-templates.html">GitHub Issue Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/cookiecutter.html">Cookiecutter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">python_lifecycle_training</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pypi_release_checklist.html">PyPI Release Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">python-lifecycle-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial.html">Tutorial</a> &raquo;</li>
+        
+      <li>Documentation: Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/deployment/sphinx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation-sphinx">
+<h1>Documentation: Sphinx<a class="headerlink" href="#documentation-sphinx" title="Permalink to this headline">¶</a></h1>
+<p><strong>Sphinx</strong> is a tool that makes it easy to create intelligent and beautiful
+documentation, written by Georg Brandl and licensed under the BSD license.</p>
+<p>It was originally created for the Python documentation, and it has excellent facilities
+for the documentation of software projects in a range of languages. The following
+features should be highlighted:</p>
+<ul class="simple">
+<li><p>Output formats: HTML (including Windows HTML Help), LaTeX (for printable PDF
+versions), ePub, Texinfo, manual pages, plain text</p></li>
+<li><p>Extensive cross-references: semantic markup and automatic links for functions,
+classes, citations, glossary terms and similar pieces of information</p></li>
+<li><p>Hierarchical structure: easy definition of a document tree, with automatic links to
+siblings, parents and children</p></li>
+<li><p>Automatic indices: general index as well as a language-specific module indices</p></li>
+<li><p>Code handling: automatic highlighting using the Pygments highlighter</p></li>
+<li><p>Extensions: automatic testing of code snippets, inclusion of docstrings from Python
+modules (API docs), and more</p></li>
+<li><p>Contributed extensions: more than 50 extensions contributed by users in a second
+repository; most of them installable from PyPI</p></li>
+</ul>
+<p>Sphinx uses reStructuredText as its markup language, and many of its strengths come from
+the power and straightforwardness of reStructuredText and its parsing and translating
+suite, the Docutils.</p>
+<p>For more information visit <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add sphinx --dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx comes with a script called <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> that sets up a source directory
+and creates a default <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> with the most useful configuration values from a few
+questions it asks you.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-quickstart -v <span class="sb">`</span>poetry version -s<span class="sb">`</span> docs
+</pre></div>
+</div>
+<img alt="Sphinx quickstart" src="../_images/sphinx-quickstart.png" />
+<p>After you answer all the prompts the following files will be created:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docs
+├── _build/
+├── _static/
+├── _templates/
+├── conf.py
+├── index.rst
+├── make.bat
+└── Makefile
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -C docs html
+<span class="gp">$</span> chromium docs/_build/html/index.html
+</pre></div>
+</div>
+<img alt="HTML output of sphinx quickstart" src="../_images/quickstart-html.png" />
+</div>
+<div class="section" id="theme">
+<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this headline">¶</a></h2>
+<p>Doesn’t look much right now but it’ll get better. Let’s change the theme to the most
+popular theme, Read the Docs.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add sphinx-rtd-theme --dev
+<span class="gp">$</span> poetry remove sphinx --dev
+</pre></div>
+</div>
+<p>Change the following line in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
+</pre></div>
+</div>
+<p>Clean the existing build and then build again.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -C docs clean
+<span class="gp">$</span> make -C docs html
+<span class="gp">$</span> chromium docs/_build/html/index.html
+</pre></div>
+</div>
+<img alt="Sphinx Read the Docs Theme" src="../_images/sphinx-rtd-theme.png" />
+<p>Does it look better now?</p>
+</div>
+<div class="section" id="auto-documentation">
+<h2>Auto Documentation<a class="headerlink" href="#auto-documentation" title="Permalink to this headline">¶</a></h2>
+<p>We can convert our code docs into readable sphinx documentation.</p>
+<p>First, uncomment the following lines in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Path setup --------------------------------------------------------------</span>
+
+<span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Now add the autodoc extension in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file itself.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Generate the docs for your modules</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-apidoc -o docs/ python_lifecycle_training
+</pre></div>
+</div>
+<p>Add modules as a content in index.rst file</p>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+
+   modules
+</pre></div>
+</div>
+<p>Add your module docs in a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file within the docs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ignore module docs</span>
+<span class="n">python_lifecycle_training</span><span class="o">*.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>Clean and build again</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -C docs clean
+<span class="gp">$</span> make -C docs html
+<span class="gp">$</span> chromium docs/_build/html/index.html
+</pre></div>
+</div>
+<img alt="Sphinx auto documentation" src="../_images/autodoc.png" />
+</div>
+<div class="section" id="google-docstrings">
+<h2>Google Docstrings<a class="headerlink" href="#google-docstrings" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try adding a docstring in our simple calculator to see what happens</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Real</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Real</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Real</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Add two numbers</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">       a (Real): The first number</span>
+<span class="sd">       b (Real): The second number</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       Real: Sum of two numbers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Adding </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -C docs clean
+<span class="gp">$</span> make -C docs html
+<span class="gp">$</span> chromium docs/_build/html/index.html
+</pre></div>
+</div>
+<img alt="Google docstrings" src="../_images/google-docs.png" />
+<p>Something doesn’t seem right here. In order for google style docstrings to be displayed
+properly we need the napoleon sphinx extension. Go ahead and add it to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sphinx.ext.napoleon&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make -C docs clean
+<span class="gp">$</span> make -C docs html
+<span class="gp">$</span> chromium docs/_build/html/index.html
+</pre></div>
+</div>
+<img alt="Fix google docstrings" src="../_images/google-docs-fix.png" />
+<p>This seems better, doesn’t it?</p>
+</div>
+<div class="section" id="document-build-test">
+<h2>Document Build Test<a class="headerlink" href="#document-build-test" title="Permalink to this headline">¶</a></h2>
+<p>Add the following lines in your tox file</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[tox]</span>
+<span class="na">envlist</span> <span class="o">=</span> <span class="s">..., docs</span>
+<span class="na">...</span>
+
+<span class="k">[testenv:docs]</span>
+<span class="na">basepython</span> <span class="o">=</span> <span class="s">python</span>
+<span class="na">changedir</span> <span class="o">=</span> <span class="s">docs</span>
+<span class="na">deps</span> <span class="o">=</span><span class="s"></span>
+<span class="s">   sphinx-rtd-theme</span>
+<span class="s">   toml</span>
+<span class="na">commands</span> <span class="o">=</span><span class="s"></span>
+<span class="s">   sphinx-build -b html -d {envtmpdir}/doctrees . {envtmpdir}</span>
+</pre></div>
+</div>
+<p>Run tox</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tox
+</pre></div>
+</div>
+</div>
+<div class="section" id="miscellaneous">
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="useful-sphinx-extensions">
+<h3>Useful sphinx extensions<a class="headerlink" href="#useful-sphinx-extensions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.coverage&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.doctest&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.githubpages&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.napoleon&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sphinx.ext.viewcode&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dont-show-todos">
+<h3>Don’t show todos<a class="headerlink" href="#dont-show-todos" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for todo extension ----------------------------------------------</span>
+
+<span class="c1"># If true, `todo` and `todoList` produce output, else they produce nothing.</span>
+<span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="better-syntax-highlighting">
+<h3>Better syntax highlighting<a class="headerlink" href="#better-syntax-highlighting" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The name of the Pygments (syntax highlighting) style to use.</span>
+<span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">&quot;sphinx&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="auto-generate-your-project-meta">
+<h3>Auto-generate your project meta<a class="headerlink" href="#auto-generate-your-project-meta" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add toml --dev
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">toml</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="k">def</span> <span class="nf">_get_project_meta</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">toml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;../pyproject.toml&quot;</span><span class="p">)[</span><span class="s2">&quot;tool&quot;</span><span class="p">][</span><span class="s2">&quot;poetry&quot;</span><span class="p">]</span>
+
+
+<span class="n">pkg_meta</span> <span class="o">=</span> <span class="n">_get_project_meta</span><span class="p">()</span>
+<span class="n">project</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pkg_meta</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s2">&quot;2020, Shashanka Prajapati&quot;</span>
+<span class="n">authors</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pkg_meta</span><span class="p">[</span><span class="s2">&quot;authors&quot;</span><span class="p">])</span>
+
+<span class="c1"># The short X.Y version</span>
+<span class="n">version</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">pkg_meta</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">])</span>
+
+<span class="c1"># The full version, including alpha/beta/rc tags</span>
+<span class="n">release</span> <span class="o">=</span> <span class="n">version</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<p>To move on to the next step commit or stash your changes then checkout to the branch
+<code class="docutils literal notranslate"><span class="pre">deploy/ci/test</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git stash
+<span class="gp">$</span> git checkout deploy/ci/test
+</pre></div>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry remove sphinx-rtd-theme --dev
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gh-actions.html" class="btn btn-neutral float-right" title="Continuous Integration: GitHub Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../setup/tox.html" class="btn btn-neutral float-left" title="Testing: tox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Shashanka Prajapati
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Interface: fire &mdash; python-lifecycle-training 0.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Logging: loguru" href="loguru.html" />
+    <link rel="prev" title="Pre-commit" href="../initialization/pre-commit.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> python-lifecycle-training
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Python Lifecycle Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../initialization/editorconfig.html">EditorConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/flake8.html">Flake8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/black.html">Black</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/isort.html">isort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/mypy.html">MyPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initialization/pre-commit.html">Pre-commit</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Command Line Interface: fire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#self-defined-commands">Self-defined Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before">Before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after">After</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="loguru.html">Logging: loguru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynaconf.html">Configuration Management: dynaconf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytest.html">Testing: pytest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coverage.html">Testing: coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytest-cov.html">Testing: pytest-cov</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tox.html">Testing: tox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/sphinx.html">Documentation: Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/gh-actions.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/gh-pages.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/pypi.html">Continuous Integration: GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/gh-issue-templates.html">GitHub Issue Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/cookiecutter.html">Cookiecutter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">python_lifecycle_training</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pypi_release_checklist.html">PyPI Release Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">python-lifecycle-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorial.html">Tutorial</a> &raquo;</li>
+        
+      <li>Command Line Interface: fire</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/setup/fire.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-interface-fire">
+<h1>Command Line Interface: fire<a class="headerlink" href="#command-line-interface-fire" title="Permalink to this headline">¶</a></h1>
+<p><strong>Python Fire</strong> is a library for automatically generating command-line interfaces (CLIs)
+from absolutely any Python object.</p>
+<ul class="simple">
+<li><p>Python Fire is a simple way to create a CLI in Python.</p></li>
+<li><p>Python Fire is a helpful tool for developing and debugging Python code.</p></li>
+<li><p>Python Fire helps with exploring existing code or turning other people’s code into a
+CLI.</p></li>
+<li><p>Python Fire makes transitioning between Bash and Python easier.</p></li>
+<li><p>Python Fire makes using a Python REPL easier by setting up the REPL with the modules
+and variables you’ll need already imported and created.</p></li>
+</ul>
+<p>For more information visit <a class="reference external" href="https://google.github.io/python-fire/">https://google.github.io/python-fire/</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add fire
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>You can call <code class="docutils literal notranslate"><span class="pre">Fire</span></code> on any Python object:
+functions, classes, modules, objects, dictionaries, lists, tuples, etc. They all work!</p>
+<p>Here’s an example of calling Fire on a function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numbers</span> <span class="kn">import</span> <span class="n">Real</span>
+
+<span class="kn">import</span> <span class="nn">fire</span>
+
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Real</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Real</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Real</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, from the command line, you can run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m python_lifecycle_training.calculator.simple <span class="m">2</span> <span class="m">2</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Now, let us try calling Fire on a class by creating a complex calculator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># python_lifecycle_training/calculator/complex.py</span>
+<span class="kn">import</span> <span class="nn">fire</span>
+
+
+<span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">Calculator</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then, from the command line, you can run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m python_lifecycle_training.calculator.complex add <span class="m">2</span> <span class="m">2</span>
+<span class="go">4</span>
+
+<span class="gp">$</span> python -m python_lifecycle_training.calculator.complex sub <span class="m">2</span> <span class="m">2</span>
+<span class="go">0</span>
+
+<span class="gp">$</span> python -m python_lifecycle_training.calculator.complex mul <span class="m">2</span> <span class="m">2</span>
+<span class="go">4</span>
+
+<span class="gp">$</span> python -m python_lifecycle_training.calculator.complex div <span class="m">2</span> <span class="m">2</span>
+<span class="go">1.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="self-defined-commands">
+<h2>Self-defined Commands<a class="headerlink" href="#self-defined-commands" title="Permalink to this headline">¶</a></h2>
+<p>It is pretty tedious to run our commands like this so let us create some entry points.
+First replace the file executable <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> with a main method that
+calls your fire command.</p>
+<div class="section" id="before">
+<h3>Before<a class="headerlink" href="#before" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">Calculator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="after">
+<h3>After<a class="headerlink" href="#after" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">Calculator</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now create entry points in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> below <em>dev-dependencies</em>.</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
+<span class="na">calc-simp</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.simple:main&quot;</span>
+<span class="na">calc-complex</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.complex:main&quot;</span>
+</pre></div>
+</div>
+<p>Install your package via poetry</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry install
+</pre></div>
+</div>
+<p>Now you can run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> calc-simp <span class="m">2</span> <span class="m">2</span>
+<span class="go">4</span>
+
+<span class="gp">$</span> calc-complex add <span class="m">2</span> <span class="m">2</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Comment out <code class="docutils literal notranslate"><span class="pre">disallow_untyped_defs</span> <span class="pre">=</span> <span class="pre">true</span></code> for <em>mypy</em> in <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> for
+convenience</p>
+</div>
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<p>To move on to the next step commit or stash your changes then checkout to the branch
+<code class="docutils literal notranslate"><span class="pre">setup/log/loguru</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git stash
+<span class="gp">$</span> git checkout setup/log/loguru
+</pre></div>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry remove fire
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loguru.html" class="btn btn-neutral float-right" title="Logging: loguru" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../initialization/pre-commit.html" class="btn btn-neutral float-left" title="Pre-commit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Shashanka Prajapati
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
