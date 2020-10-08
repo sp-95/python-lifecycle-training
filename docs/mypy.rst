@@ -39,7 +39,7 @@ Usage
 
     $ mypy python_lifecycle_training tests
 
-.. image:: docs/_static/mypy/img/usage.png
+.. image:: ../docs/_static/mypy/img/usage.png
    :alt: MyPy Output
 
 Resolution

@@ -133,7 +133,7 @@ Pre-commit will run automatically every time you make a commit.
     $ git add .
     $ git commit
 
-.. image:: docs/_static/pre-commit/img/run.png
+.. image:: ../docs/_static/pre-commit/img/run.png
     :alt: Pre-commit output
 
 You can run it manually as well.
@@ -142,7 +142,7 @@ You can run it manually as well.
 
     $ pre-commit run
 
-.. image:: docs/_static/pre-commit/img/run.png
+.. image:: ../docs/_static/pre-commit/img/run.png
     :alt: Pre-commit run output
 
 If you want to run pre-commit on all your files:
@@ -151,7 +151,7 @@ If you want to run pre-commit on all your files:
 
     $ pre-commit run --all-files
 
-.. image:: docs/_static/pre-commit/img/run-all-files.png
+.. image:: ../docs/_static/pre-commit/img/run-all-files.png
     :alt: Pre-commit run all-files output
 
 Or if you want to run pre-commit on specific files/folders:
@@ -160,7 +160,7 @@ Or if you want to run pre-commit on specific files/folders:
 
     $ pre-commit run --files python_lifecycle_training tests
 
-.. image:: docs/_static/pre-commit/img/run-files.png
+.. image:: ../docs/_static/pre-commit/img/run-files.png
     :alt: Pre-commit run files output
 
 You can also run a specific hook:
@@ -169,7 +169,7 @@ You can also run a specific hook:
 
     $ pre-commit run flake8 --files tests/calculator/test_simple.py
 
-.. image:: docs/_static/pre-commit/img/run-flake8.png
+.. image:: ../docs/_static/pre-commit/img/run-flake8.png
     :alt: Pre-commit run flake8 output
 
 Useful Commands
@@ -191,7 +191,7 @@ Temporarily disable hooks
 
     $ SKIP=flake8,mypy git commit
 
-.. image:: docs/_static/pre-commit/img/run-skip.png
+.. image:: ../docs/_static/pre-commit/img/run-skip.png
     :alt: Pre-commit output by disabling hooks
 
 Automatically enable pre-commit for all repositories
