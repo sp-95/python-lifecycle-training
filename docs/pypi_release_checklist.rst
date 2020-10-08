@@ -51,9 +51,9 @@ For Every Release
 
         $ git push --tags
 
-#. Create a release on GitHub at https://github.com/sp-fm/fuse-utils/releases. Paste
-   the change logs into the release's description, and come up with a title for the
-   release.
+#. Create a release on GitHub at https://github.com/sp-fm/python-lifecycle-training/releases.
+   Paste the change logs into the release's description, and come up with a title for
+   the release.
 
 #. Check the PyPI listing page to make sure that the README, release notes, and roadmap
    display properly. If not, try one of these:
