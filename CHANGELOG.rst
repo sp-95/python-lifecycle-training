@@ -2,6 +2,16 @@
 CHANGELOG
 =========
 
+0.1.2 (2020-10-08)
+------------------
+
+Changes
+~~~~~~~
+
+* Group docs
+* GitHub Issue Template Instructions
+* Cookiecutter Instructions
+
 0.1.1 (2020-10-08)
 ------------------
 
