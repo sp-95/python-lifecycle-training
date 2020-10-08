@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing: pytest-cov &mdash; python-lifecycle-training 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> python-lifecycle-training
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Python Lifecycle Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">python_lifecycle_training</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extra</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi_release_checklist.html">PyPI Release Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Credits</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">python-lifecycle-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Testing: pytest-cov</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pytest-cov.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="testing-pytest-cov">
+<h1>Testing: pytest-cov<a class="headerlink" href="#testing-pytest-cov" title="Permalink to this headline">¶</a></h1>
+<p><strong>pytest-cov</strong> is a pytest plugin that produces coverage reports. Compared to just using
+<code class="docutils literal notranslate"><span class="pre">coverage</span> <span class="pre">run</span></code> this plugin has some extra features:</p>
+<ul class="simple">
+<li><p>Subprocess support: you can fork or run stuff in a subprocess and will get covered
+without any fuss.</p></li>
+<li><p>Consistent pytest behavior. If you run <code class="docutils literal notranslate"><span class="pre">coverage</span> <span class="pre">run</span> <span class="pre">-m</span> <span class="pre">pytest</span></code> you will have
+slightly different <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> (CWD will be in it, unlike when running <code class="docutils literal notranslate"><span class="pre">pytest</span></code>).</p></li>
+</ul>
+<p>All features offered by the coverage package should work, either through pytest-cov’s
+command-line options or through coverage’s config file.</p>
+<p>For more information visit <a class="reference external" href="https://pytest-cov.readthedocs.io/en/latest/readme.html">https://pytest-cov.readthedocs.io/en/latest/readme.html</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry add pytest-cov --dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest --cov
+</pre></div>
+</div>
+<img alt="Pytest coverage output" src="docs/_static/pytest-cov/img/pytest-cov.png" />
+<p>Terminal report with missing line numbers:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest --cov --cov-report<span class="o">=</span>term-missing
+</pre></div>
+</div>
+<img alt="Pytest coverage output with missing line numbers" src="docs/_static/pytest-cov/img/term-missing.png" />
+<p>Terminal report with skip covered:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest --cov --cov-report<span class="o">=</span>term-missing:skip-covered
+</pre></div>
+</div>
+<img alt="Pytest coverage output with skip covered" src="docs/_static/pytest-cov/img/skip-covered.png" />
+<p>HTML report:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest --cov --cov-report<span class="o">=</span>html
+<span class="gp">$</span> chromium htmlcov/index.html
+</pre></div>
+</div>
+<img alt="HTML report of pytest coverage" src="docs/_static/pytest-cov/img/html.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can replace pytest and coverage with pytest-cov in your dev-dependencies</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>Update the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> configuration in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> so that <code class="docutils literal notranslate"><span class="pre">pytest-cov</span></code> always
+runs when you run <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.pytest.ini_options]</span>
+<span class="na">testpaths</span> <span class="o">=</span> <span class="s">&quot;tests&quot;</span>
+<span class="na">addopts</span> <span class="o">=</span> <span class="s">&quot;--cov --cov-report=term-missing&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<p>We can see that we failed to acquire the required test coverage. Let us write some more
+tests. Create <code class="docutils literal notranslate"><span class="pre">test_complex.py</span></code> to start writing tests for the complex calculator.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">python_lifecycle_training.calculator.complex</span> <span class="kn">import</span> <span class="n">Calculator</span>
+
+
+<span class="k">class</span> <span class="nc">TestCalculator</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_add</span><span class="p">():</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_sub</span><span class="p">():</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_mul</span><span class="p">():</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_div</span><span class="p">():</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run tests</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Complex calculator tests" src="docs/_static/pytest/img/complex.png" />
+<div class="section" id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<p>To write assertions about raised exceptions, you need to use <code class="docutils literal notranslate"><span class="pre">pytest.raises</span></code> as a
+context manager.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">test_div_by_zero</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">)</span> <span class="k">as</span> <span class="n">excinfo</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">excinfo</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;division by zero&quot;</span>
+</pre></div>
+</div>
+<p>Run tests</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Add division by zero test" src="docs/_static/pytest/img/div-by-zero.png" />
+</div>
+<div class="section" id="warnings">
+<h3>Warnings<a class="headerlink" href="#warnings" title="Permalink to this headline">¶</a></h3>
+<p>Exception handling is quite important as we don’t want them showing up in our production
+server. Let’s write a warning when we encounter this problem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">fire</span>
+<span class="kn">from</span> <span class="nn">loguru</span> <span class="kn">import</span> <span class="n">logger</span>
+
+<span class="kn">import</span> <span class="nn">python_lifecycle_training</span>
+
+
+<span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="o">...</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dividing </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">python_lifecycle_training</span><span class="o">.</span><span class="n">ENV</span> <span class="o">==</span> <span class="s2">&quot;production&quot;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+            <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>You can check that code raises a particular warning using <code class="docutils literal notranslate"><span class="pre">pytest.warns</span></code>, which works
+similar to <code class="docutils literal notranslate"><span class="pre">raises</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">python_lifecycle_training</span>
+
+
+<span class="k">def</span> <span class="nf">test_div_by_zero</span><span class="p">():</span>
+    <span class="n">python_lifecycle_training</span><span class="o">.</span><span class="n">ENV</span> <span class="o">=</span> <span class="s2">&quot;development&quot;</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">)</span> <span class="k">as</span> <span class="n">excinfo</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">excinfo</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;division by zero&quot;</span>
+
+    <span class="n">python_lifecycle_training</span><span class="o">.</span><span class="n">ENV</span> <span class="o">=</span> <span class="s2">&quot;production&quot;</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">warns</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">)</span> <span class="k">as</span> <span class="n">record</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">Calculator</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;division by zero&quot;</span>
+</pre></div>
+</div>
+<p>Run tests</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Test for warnings" src="docs/_static/pytest/img/warning-test.png" />
+</div>
+<div class="section" id="logs">
+<h3>Logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h3>
+<p>Pytest cannot capture logs from loguru directly. So we need to propagate our logs to the
+built-in Python logging to test log messages using pytest.</p>
+<p>Add the propagation handler in the project <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+
+<span class="k">class</span> <span class="nc">PropagateHandler</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Handler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+
+<span class="n">logger</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">PropagateHandler</span><span class="p">(),</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{message}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In case you don’t remember, we had written a code that logs our working environment when
+we make an instance of the CLI Main class of the calculator. Let us try writing log
+tests for it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># tests/calculator/test_cli.py</span>
+<span class="kn">import</span> <span class="nn">python_lifecycle_training</span>
+<span class="kn">from</span> <span class="nn">python_lifecycle_training.calculator.cli</span> <span class="kn">import</span> <span class="n">Main</span>
+
+
+<span class="k">class</span> <span class="nc">TestCalculatorCLI</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_log</span><span class="p">(</span><span class="n">caplog</span><span class="p">):</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="s2">&quot;production&quot;</span>
+        <span class="n">python_lifecycle_training</span><span class="o">.</span><span class="n">ENV</span> <span class="o">=</span> <span class="n">env</span>
+
+        <span class="n">Main</span><span class="p">(</span><span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">env</span> <span class="ow">in</span> <span class="n">caplog</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+<p>Run tests</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest
+</pre></div>
+</div>
+<img alt="Test for logs" src="docs/_static/pytest/img/log-test.png" />
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Write tests for the broken calculator</p></li>
+<li><p>Write parameterized test for the method <code class="docutils literal notranslate"><span class="pre">test_div</span></code></p></li>
+<li><p>Write parameterized test to test log for both “development” and “production”
+environments</p></li>
+</ol>
+<p>To move on to the next step commit or stash your changes then checkout to the branch
+<code class="docutils literal notranslate"><span class="pre">setup/test/tox</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git stash
+<span class="gp">$</span> git checkout setup/test/tox
+</pre></div>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> poetry remove pytest-cov --dev
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Shashanka Prajapati
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

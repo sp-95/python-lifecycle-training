@@ -1,0 +1,18 @@
+python\_lifecycle\_training package
+===================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   python_lifecycle_training.calculator
+
+Module contents
+---------------
+
+.. automodule:: python_lifecycle_training
+   :members:
+   :undoc-members:
+   :show-inheritance:
