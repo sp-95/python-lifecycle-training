@@ -105,4 +105,15 @@ Add a badge
         :target: https://sp-fm.github.io/python-lifecycle-training/
         :alt: Documentation
 
+Next Step
+---------
+
+To move on to the next step commit or stash your changes then checkout to the branch
+``deploy/ci/release``
+
+.. code-block:: console
+
+    $ git stash
+    $ git checkout deploy/ci/release
+
 .. _create a GitHub Pages site: https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site
