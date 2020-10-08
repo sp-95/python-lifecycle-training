@@ -33,8 +33,6 @@ this process easier let's create a Makefile.
     endef
     export PRINT_HELP_PYSCRIPT
 
-    BROWSER := python -c "$$BROWSER_PYSCRIPT"
-
     help:
         @python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
