@@ -8,9 +8,24 @@ Welcome to Python Lifecycle Training's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Getting Started
+
+   readme
+   tutorial
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Modules
 
    modules
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Extra
+
+   contributing
+   pypi_release_checklist
+   authors
 
 
 
