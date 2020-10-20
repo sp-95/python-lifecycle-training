@@ -54,6 +54,7 @@ Add coverage configurations in ``pyproject.toml``
     ]
     fail_under = 90
     ignore_errors = true
+    skip_empty = true
 
 Usage
 -----
