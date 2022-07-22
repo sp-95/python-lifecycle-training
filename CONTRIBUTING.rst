@@ -12,7 +12,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/sp-fm/python-lifecycle-training/issues.
+Report bugs at https://github.com/sp-95/python-lifecycle-training/issues.
 
 If you are reporting a bug, please include:
 
@@ -41,7 +41,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/sp-fm/python-lifecycle-training/issues.
+https://github.com/sp-95/python-lifecycle-training/issues.
 
 If you are proposing a feature:
 
@@ -59,7 +59,7 @@ ready to go.
 
    .. code-block:: console
 
-        $ git clone git@github.com:sp-fm/python-lifecycle-training.git
+        $ git clone git@github.com:sp-95/python-lifecycle-training.git
 
 #. Assuming you have poetry installed, you can create a new environment for your local
    development by typing:
@@ -110,7 +110,7 @@ Before you submit a pull request, check that it meets these guidelines:
    ``README.rst``.
 
 #. The pull request should work for Python 3.7 and 3.8. Check
-   https://github.com/sp-fm/python-lifecycle-training/actions?query=workflow%3ATests
+   https://github.com/sp-95/python-lifecycle-training/actions?query=workflow%3ATests
    and make sure that the tests pass for all supported Python versions.
 
 .. _new_test:
@@ -175,5 +175,5 @@ GitHub Actions will then deploy to PyPI once you make a release if tests pass.
 
 See pypi-release-checklist_ for more information.
 
-.. _pypi-release-checklist: https://sp-fm.github.io/python-lifecycle-training/pypi_release_checklist.html
+.. _pypi-release-checklist: https://sp-95.github.io/python-lifecycle-training/pypi_release_checklist.html
 .. _Add a New Test: new_test_

@@ -15,8 +15,8 @@ Add some description for your project.
     [tool.poetry]
     name = "python-lifecycle-training"
     version = "0.1.0"
-    repository = "https://github.com/sp-fm/python-lifecycle-training"
-    documentation = "https://sp-fm.github.io/python-lifecycle-training/"
+    repository = "https://github.com/sp-95/python-lifecycle-training"
+    documentation = "https://sp-95.github.io/python-lifecycle-training/"
     description = "A training program to learn the Python Development Cycle"
     authors = ["Shashanka Prajapati <shashanka@fusemachines.com>"]
     readme = "README.rst"
@@ -38,7 +38,7 @@ Add some description for your project.
     ]
 
     [tool.poetry.urls]
-    "Bug Tracker" = "https://github.com/sp-fm/python-lifecycle-training/issues"
+    "Bug Tracker" = "https://github.com/sp-95/python-lifecycle-training/issues"
 
 Token Setup
 ~~~~~~~~~~~
@@ -144,13 +144,13 @@ Release
 Add a badge
 -----------
 
-.. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Release/badge.svg
+.. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Release/badge.svg
     :target: https://pypi.python.org/pypi/python-lifecycle-training
     :alt: Release
 
 .. code-block:: RST
 
-    .. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Release/badge.svg
+    .. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Release/badge.svg
         :target: https://pypi.python.org/pypi/python-lifecycle-training
         :alt: Release
 

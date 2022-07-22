@@ -151,14 +151,14 @@ Did the tests start running as soon as you created a PR?
 Add a badge
 -----------
 
-.. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Tests/badge.svg
-    :target: https://github.com/sp-fm/python-lifecycle-training/actions?query=workflow%3ATests
+.. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Tests/badge.svg
+    :target: https://github.com/sp-95/python-lifecycle-training/actions?query=workflow%3ATests
     :alt: Tests
 
 .. code-block:: RST
 
-    .. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Tests/badge.svg
-        :target: https://github.com/sp-fm/python-lifecycle-training/actions?query=workflow%3ATests
+    .. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Tests/badge.svg
+        :target: https://github.com/sp-95/python-lifecycle-training/actions?query=workflow%3ATests
         :alt: Tests
 
 Next Step
