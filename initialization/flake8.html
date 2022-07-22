@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -110,7 +111,7 @@
            <div itemprop="articleBody">
              
   <section id="flake8">
-<h1>Flake8<a class="headerlink" href="#flake8" title="Permalink to this headline"></a></h1>
+<h1>Flake8<a class="headerlink" href="#flake8" title="Permalink to this heading"></a></h1>
 <p>Flake8 is a Python library that wraps <strong>PyFlakes</strong>, <strong>pycodestyle</strong> and <strong>Ned
 Batchelder’s McCabe script</strong>. It is a great toolkit for checking your codebase against
 coding style (PEP8), programming errors (like “library imported but unused” and
@@ -123,34 +124,34 @@ there are other control flow operations that impact the calculus of the cyclomat
 complexity. It is also referred to as McCabe complexity.</p>
 <p>For further details visit <a class="reference external" href="https://flake8.pycqa.org/en/latest/index.html">https://flake8.pycqa.org/en/latest/index.html</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add flake8 --dev
 </pre></div>
 </div>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Create a <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file and add the following:</p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[flake8]</span>
-<span class="na">max-line-length</span> <span class="o">=</span> <span class="s">88</span>
-<span class="na">max-complexity</span> <span class="o">=</span> <span class="s">10</span>
-<span class="na">show-source</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">extend-ignore</span> <span class="o">=</span> <span class="s">E203, W503</span>
-<span class="na">per-file-ignores</span> <span class="o">=</span>
-    <span class="c1"># imported but unused</span>
-    <span class="na">__init__.py: F401</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[flake8]</span><span class="w"></span>
+<span class="na">max-line-length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">88</span><span class="w"></span>
+<span class="na">max-complexity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10</span><span class="w"></span>
+<span class="na">show-source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">extend-ignore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">E203, W503</span><span class="w"></span>
+<span class="na">per-file-ignores</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># imported but unused</span><span class="w"></span>
+<span class="w">    </span><span class="na">__init__.py: F401</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>flake8 python_lifecycle tests
 </pre></div>
 </div>
 <img alt="Flake8 output" src="../_images/usage1.png" />
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">init/format/black</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -159,7 +160,7 @@ complexity. It is also referred to as McCabe complexity.</p>
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove flake8 --dev
 </pre></div>
 </div>

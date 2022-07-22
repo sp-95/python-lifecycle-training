@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -115,35 +116,35 @@
            <div itemprop="articleBody">
              
   <section id="isort">
-<h1>isort<a class="headerlink" href="#isort" title="Permalink to this headline"></a></h1>
+<h1>isort<a class="headerlink" href="#isort" title="Permalink to this heading"></a></h1>
 <p><strong>isort</strong> simply stands for import sort. It is a Python utility/library to sort imports
 alphabetically and automatically separated into sections and by type. It provides a
 command-line utility, Python library, and <a class="reference external" href="https://github.com/pycqa/isort/wiki/isort-Plugins">plugins for various editors</a> to quickly sort
 all your imports.</p>
 <p>For further information visit <a class="reference external" href="https://pycqa.github.io/isort/">https://pycqa.github.io/isort/</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add isort --dev
 </pre></div>
 </div>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Add the isort configurations in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.isort]</span>
-<span class="na">multi_line_output</span> <span class="o">=</span> <span class="s">3</span>
-<span class="na">include_trailing_comma</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">force_grid_wrap</span> <span class="o">=</span> <span class="s">0</span>
-<span class="na">use_parentheses</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">ensure_newline_before_comments</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">line_length</span> <span class="o">=</span> <span class="s">88</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.isort]</span><span class="w"></span>
+<span class="na">multi_line_output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">3</span><span class="w"></span>
+<span class="na">include_trailing_comma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">force_grid_wrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="w"></span>
+<span class="na">use_parentheses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">ensure_newline_before_comments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">line_length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">88</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <section id="before">
-<h3>Before<a class="headerlink" href="#before" title="Permalink to this headline"></a></h3>
+<h3>Before<a class="headerlink" href="#before" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">python_lifecycle_training</span> <span class="kn">import</span> <span class="n">__version__</span>
 <span class="kn">import</span> <span class="nn">python_lifecycle_training</span>
 <span class="kn">from</span> <span class="nn">pytest</span> <span class="kn">import</span> <span class="n">fixture</span>
@@ -154,7 +155,7 @@ all your imports.</p>
 </div>
 </section>
 <section id="after">
-<h3>After<a class="headerlink" href="#after" title="Permalink to this headline"></a></h3>
+<h3>After<a class="headerlink" href="#after" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
@@ -168,7 +169,7 @@ all your imports.</p>
 </section>
 </section>
 <section id="add-a-badge">
-<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this headline"></a></h2>
+<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this heading"></a></h2>
 <a class="reference external image-reference" href="https://pycqa.github.io/isort/"><img alt="imports: isort" src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336" /></a>
 <div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336
     <span class="nc">:target:</span> https://pycqa.github.io/isort/
@@ -177,7 +178,7 @@ all your imports.</p>
 </div>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">init/type-hint/mypy</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -186,7 +187,7 @@ all your imports.</p>
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove isort --dev
 </pre></div>
 </div>

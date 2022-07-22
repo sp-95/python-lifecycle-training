@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -114,7 +115,7 @@
            <div itemprop="articleBody">
              
   <section id="command-line-interface-fire">
-<h1>Command Line Interface: fire<a class="headerlink" href="#command-line-interface-fire" title="Permalink to this headline"></a></h1>
+<h1>Command Line Interface: fire<a class="headerlink" href="#command-line-interface-fire" title="Permalink to this heading"></a></h1>
 <p><strong>Python Fire</strong> is a library for automatically generating command-line interfaces (CLIs)
 from absolutely any Python object.</p>
 <ul class="simple">
@@ -128,13 +129,13 @@ and variables you’ll need already imported and created.</p></li>
 </ul>
 <p>For more information visit <a class="reference external" href="https://google.github.io/python-fire/">https://google.github.io/python-fire/</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add fire
 </pre></div>
 </div>
 </section>
 <section id="basic-usage">
-<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h2>
 <p>You can call <code class="docutils literal notranslate"><span class="pre">Fire</span></code> on any Python object:
 functions, classes, modules, objects, dictionaries, lists, tuples, etc. They all work!</p>
 <p>Here’s an example of calling Fire on a function.</p>
@@ -199,27 +200,27 @@ functions, classes, modules, objects, dictionaries, lists, tuples, etc. They all
 </div>
 </section>
 <section id="self-defined-commands">
-<h2>Self-defined Commands<a class="headerlink" href="#self-defined-commands" title="Permalink to this headline"></a></h2>
+<h2>Self-defined Commands<a class="headerlink" href="#self-defined-commands" title="Permalink to this heading"></a></h2>
 <p>It is pretty tedious to run our commands like this so let us create some entry points.
 First replace the file executable <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code> with a main method that
 calls your fire command.</p>
 <section id="before">
-<h3>Before<a class="headerlink" href="#before" title="Permalink to this headline"></a></h3>
+<h3>Before<a class="headerlink" href="#before" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">Calculator</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="after">
-<h3>After<a class="headerlink" href="#after" title="Permalink to this headline"></a></h3>
+<h3>After<a class="headerlink" href="#after" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">fire</span><span class="o">.</span><span class="n">Fire</span><span class="p">(</span><span class="n">Calculator</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now create entry points in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> below <em>dev-dependencies</em>.</p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
-<span class="na">calc-simp</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.simple:main&quot;</span>
-<span class="na">calc-complex</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.complex:main&quot;</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry.scripts]</span><span class="w"></span>
+<span class="na">calc-simp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_lifecycle_training.calculator.simple:main&quot;</span><span class="w"></span>
+<span class="na">calc-complex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_lifecycle_training.calculator.complex:main&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Install your package via poetry</p>
@@ -242,7 +243,7 @@ convenience</p>
 </section>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">setup/log/loguru</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -251,7 +252,7 @@ convenience</p>
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove fire
 </pre></div>
 </div>

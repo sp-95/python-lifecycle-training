@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -121,9 +122,9 @@
            <div itemprop="articleBody">
              
   <section id="configuration-management-dynaconf">
-<h1>Configuration Management: dynaconf<a class="headerlink" href="#configuration-management-dynaconf" title="Permalink to this headline"></a></h1>
+<h1>Configuration Management: dynaconf<a class="headerlink" href="#configuration-management-dynaconf" title="Permalink to this heading"></a></h1>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline"></a></h2>
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Inspired by the <a class="reference external" href="https://12factor.net/config">12-factor application guide</a></p></li>
 <li><p><strong>Settings management</strong> (default values, validation, parsing, templating)</p></li>
@@ -141,13 +142,13 @@ storage.</p></li>
 <p>For more information visit <a class="reference external" href="https://www.dynaconf.com/">https://www.dynaconf.com/</a></p>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add dynaconf
 </pre></div>
 </div>
 </section>
 <section id="initialization">
-<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline"></a></h2>
+<h2>Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir configs
 <span class="gp">$ </span>dynaconf init -p configs -f yaml
 </pre></div>
@@ -168,7 +169,7 @@ storage.</p></li>
 </div>
 </section>
 <section id="basic-usage">
-<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h2>
 <p>Let us create a broken calculator to see how dynaconf works.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># python_lifecycle_training/calculator/broken.py</span>
 <span class="kn">import</span> <span class="nn">fire</span>
@@ -204,11 +205,11 @@ storage.</p></li>
 </pre></div>
 </div>
 <p>Add an offset in <code class="docutils literal notranslate"><span class="pre">settings.yaml</span></code> file:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Add an entry point in <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="na">calc-broken</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.broken:main&quot;</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="na">calc-broken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_lifecycle_training.calculator.broken:main&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Install your package</p>
@@ -221,7 +222,7 @@ storage.</p></li>
 </div>
 <img alt="Broken Calculator" src="../_images/run2.png" />
 <section id="environment-variables">
-<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline"></a></h3>
+<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this heading"></a></h3>
 <p>Dynaconf prioritizes environment variables over files as the best recommendation to keep
 your settings. You can override any setting key by exporting an environment variable
 prefixed by <code class="docutils literal notranslate"><span class="pre">DYNACONF_</span></code> (or by the custom prefix)</p>
@@ -238,9 +239,9 @@ prefixed by <code class="docutils literal notranslate"><span class="pre">DYNACON
 </section>
 </section>
 <section id="advanced-features">
-<h2>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline"></a></h2>
+<h2>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this heading"></a></h2>
 <section id="switch-work-environment">
-<h3>Switch Work Environment<a class="headerlink" href="#switch-work-environment" title="Permalink to this headline"></a></h3>
+<h3>Switch Work Environment<a class="headerlink" href="#switch-work-environment" title="Permalink to this heading"></a></h3>
 <p>Enable environment switching</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">settings</span> <span class="o">=</span> <span class="n">Dynaconf</span><span class="p">(</span>
     <span class="n">envvar_prefix</span><span class="o">=</span><span class="s2">&quot;DYNACONF&quot;</span><span class="p">,</span>
@@ -250,16 +251,16 @@ prefixed by <code class="docutils literal notranslate"><span class="pre">DYNACON
 </pre></div>
 </div>
 <p>Edit <code class="docutils literal notranslate"><span class="pre">settings.yaml</span></code></p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">default</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
-  <span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">default</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 
-<span class="nt">development</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">developer</span>
+<span class="nt">development</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">developer</span><span class="w"></span>
 
-<span class="nt">production</span><span class="p">:</span>
-  <span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">admin</span>
+<span class="nt">production</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">offset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admin</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Log the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the user running the broken calculator</p>
@@ -280,7 +281,7 @@ replaced. Thus, we could access the offset in <code class="docutils literal notr
 specify it explicitly.</p>
 </section>
 <section id="switch-environment-using-environment-variable">
-<h3>Switch Environment using Environment Variable<a class="headerlink" href="#switch-environment-using-environment-variable" title="Permalink to this headline"></a></h3>
+<h3>Switch Environment using Environment Variable<a class="headerlink" href="#switch-environment-using-environment-variable" title="Permalink to this heading"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">export</span> <span class="nv">ENV_FOR_DYNACONF</span><span class="o">=</span>production
 <span class="gp">$ </span>calc-broken add <span class="m">2</span> <span class="m">2</span>
 </pre></div>
@@ -292,7 +293,7 @@ specify it explicitly.</p>
 </div>
 </section>
 <section id="switch-environment-using-cli">
-<h3>Switch Environment using CLI<a class="headerlink" href="#switch-environment-using-cli" title="Permalink to this headline"></a></h3>
+<h3>Switch Environment using CLI<a class="headerlink" href="#switch-environment-using-cli" title="Permalink to this heading"></a></h3>
 <p>Set environment to <code class="docutils literal notranslate"><span class="pre">development</span></code> in your package <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ENV</span> <span class="o">=</span> <span class="s2">&quot;development&quot;</span>
 </pre></div>
@@ -335,8 +336,8 @@ specify it explicitly.</p>
 </pre></div>
 </div>
 <p>Update entry point scripts</p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
-<span class="na">calc</span> <span class="o">=</span> <span class="s">&quot;python_lifecycle_training.calculator.cli:main&quot;</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[tool.poetry.scripts]</span><span class="w"></span>
+<span class="na">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;python_lifecycle_training.calculator.cli:main&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Install package</p>
@@ -367,7 +368,7 @@ might seem convenient but may cause problems as the env is not set globally.</p>
 </section>
 </section>
 <section id="other-features">
-<h2>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline"></a></h2>
+<h2>Other features<a class="headerlink" href="#other-features" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.dynaconf.com/secrets/">Secrets</a></p></li>
 <li><p><a class="reference external" href="https://www.dynaconf.com/merging/">Merging</a></p></li>
@@ -380,7 +381,7 @@ might seem convenient but may cause problems as the env is not set globally.</p>
 </ul>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">setup/test/pytest</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -389,7 +390,7 @@ might seem convenient but may cause problems as the env is not set globally.</p>
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove dynaconf
 </pre></div>
 </div>

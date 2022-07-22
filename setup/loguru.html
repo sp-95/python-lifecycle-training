@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -110,7 +111,7 @@
            <div itemprop="articleBody">
              
   <section id="logging-loguru">
-<h1>Logging: loguru<a class="headerlink" href="#logging-loguru" title="Permalink to this headline"></a></h1>
+<h1>Logging: loguru<a class="headerlink" href="#logging-loguru" title="Permalink to this heading"></a></h1>
 <p><strong>Loguru</strong> is a library that aims to bring enjoyable logging in Python.</p>
 <p>Also, this library is intended to make Python logging less painful by adding a bunch of
 useful functionalities that solve caveats of the standard loggers. Using logs in your
@@ -118,13 +119,13 @@ application should be an automatism, <strong>Loguru</strong> tries to make it bo
 powerful.</p>
 <p>For more information visit <a class="reference external" href="https://loguru.readthedocs.io/en/stable/">https://loguru.readthedocs.io/en/stable/</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add loguru
 </pre></div>
 </div>
 </section>
 <section id="basic-usage">
-<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline"></a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h2>
 <p>The main concept of <em>Loguru</em> is that <strong>there is one and only one logger</strong>.</p>
 <p>For convenience, it is pre-configured and outputs to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> to begin with (but
 that’s entirely configurable).</p>
@@ -146,7 +147,7 @@ handlers.</p>
 <p>Add logs in the complex calculator in the same way.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>If you want to send logged messages to a file, you just have to use a string path as the
 sink. It is also easily configurable if you need a rotating logger.</p>
 <p>Add the following in your package __init__.py file:</p>
@@ -163,7 +164,7 @@ sink. It is also easily configurable if you need a rotating logger.</p>
 been created in the directory <code class="docutils literal notranslate"><span class="pre">logs</span></code>.</p>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">setup/config/dynaconf</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -172,7 +173,7 @@ been created in the directory <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove loguru
 </pre></div>
 </div>

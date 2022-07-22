@@ -93,20 +93,20 @@ Once the Documentation test passes do the following:
 * Go to **GitHub Pages** section
 * Set your Source to **Branch: gh-pages**
 * Click **Save**
-* You can now visit https://sp-fm.github.io/python-lifecycle-training to view the
+* You can now visit https://sp-95.github.io/python-lifecycle-training to view the
   documentation
 
 Add a badge
 -----------
 
-.. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Documentation/badge.svg
-    :target: https://sp-fm.github.io/python-lifecycle-training/
+.. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Documentation/badge.svg
+    :target: https://sp-95.github.io/python-lifecycle-training/
     :alt: Documentation
 
 .. code-block:: RST
 
-    .. image:: https://github.com/sp-fm/python-lifecycle-training/workflows/Documentation/badge.svg
-        :target: https://sp-fm.github.io/python-lifecycle-training/
+    .. image:: https://github.com/sp-95/python-lifecycle-training/workflows/Documentation/badge.svg
+        :target: https://sp-95.github.io/python-lifecycle-training/
         :alt: Documentation
 
 Next Step

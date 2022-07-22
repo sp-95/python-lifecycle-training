@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,16 +114,16 @@
            <div itemprop="articleBody">
              
   <section id="continuous-integration-github-actions">
-<h1>Continuous Integration: GitHub Actions<a class="headerlink" href="#continuous-integration-github-actions" title="Permalink to this headline"></a></h1>
+<h1>Continuous Integration: GitHub Actions<a class="headerlink" href="#continuous-integration-github-actions" title="Permalink to this heading"></a></h1>
 <section id="documentation-hosting-github-pages">
-<h2>Documentation Hosting: GitHub Pages<a class="headerlink" href="#documentation-hosting-github-pages" title="Permalink to this headline"></a></h2>
+<h2>Documentation Hosting: GitHub Pages<a class="headerlink" href="#documentation-hosting-github-pages" title="Permalink to this heading"></a></h2>
 <section id="setup-github-pages">
-<h3>Setup GitHub Pages<a class="headerlink" href="#setup-github-pages" title="Permalink to this headline"></a></h3>
+<h3>Setup GitHub Pages<a class="headerlink" href="#setup-github-pages" title="Permalink to this heading"></a></h3>
 <p>We will be hosting our documents on GitHub Pages. In order to start hosting to GitHub
 Pages you must first <a class="reference external" href="https://docs.github.com/en/free-pro-team&#64;latest/github/working-with-github-pages/creating-a-github-pages-site">create a GitHub Pages site</a> if you haven’t set it up before.</p>
 </section>
 <section id="generate-docs">
-<h3>Generate Docs<a class="headerlink" href="#generate-docs" title="Permalink to this headline"></a></h3>
+<h3>Generate Docs<a class="headerlink" href="#generate-docs" title="Permalink to this heading"></a></h3>
 <p>We have to execute quite a number of commands in order to generate the docs. To make
 this process easier let’s create a Makefile.</p>
 <div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span>.PHONY: help docs
@@ -153,41 +154,41 @@ docs: ## generate Sphinx HTML documentation, including API docs
 </div>
 </section>
 <section id="sample-configuration">
-<h3>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this headline"></a></h3>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Documentation</span>
+<h3>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this heading"></a></h3>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span><span class="w"></span>
 
-<span class="nt">on</span><span class="p">:</span>
-  <span class="nt">push</span><span class="p">:</span>
-    <span class="nt">branches</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+<span class="nt">on</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
 
-<span class="nt">jobs</span><span class="p">:</span>
-  <span class="nt">document</span><span class="p">:</span>
-    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">document</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
 
-    <span class="nt">steps</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
 
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
-        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
-        <span class="nt">with</span><span class="p">:</span>
-          <span class="nt">python-version</span><span class="p">:</span> <span class="s">&quot;3.x&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.x&quot;</span><span class="w"></span>
 
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
-        <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-          <span class="no">python -m pip install --upgrade pip</span>
-          <span class="no">pip install sphinx-rtd-theme toml</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no">python -m pip install --upgrade pip</span><span class="w"></span>
+<span class="w">          </span><span class="no">pip install sphinx-rtd-theme toml</span><span class="w"></span>
 
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Generate Docs</span>
-        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make docs</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate Docs</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make docs</span><span class="w"></span>
 
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploy docs to GitHub Pages</span>
-        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span>
-        <span class="nt">with</span><span class="p">:</span>
-          <span class="nt">github_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
-          <span class="nt">publish_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docs/_build/html</span>
-          <span class="nt">allow_empty_commit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-          <span class="nt">keep_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy docs to GitHub Pages</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3</span><span class="w"></span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span><span class="w"></span>
+<span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/_build/html</span><span class="w"></span>
+<span class="w">          </span><span class="nt">allow_empty_commit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">          </span><span class="nt">keep_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Create one more pull request and merge your changes to master. Check the actions tab
@@ -198,22 +199,22 @@ once your changes have been merged.</p>
 <li><p>Go to <strong>GitHub Pages</strong> section</p></li>
 <li><p>Set your Source to <strong>Branch: gh-pages</strong></p></li>
 <li><p>Click <strong>Save</strong></p></li>
-<li><p>You can now visit <a class="reference external" href="https://sp-fm.github.io/python-lifecycle-training">https://sp-fm.github.io/python-lifecycle-training</a> to view the
+<li><p>You can now visit <a class="reference external" href="https://sp-95.github.io/python-lifecycle-training">https://sp-95.github.io/python-lifecycle-training</a> to view the
 documentation</p></li>
 </ul>
 </section>
 </section>
 <section id="add-a-badge">
-<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this headline"></a></h2>
-<a class="reference external image-reference" href="https://sp-fm.github.io/python-lifecycle-training/"><img alt="Documentation" src="https://github.com/sp-fm/python-lifecycle-training/workflows/Documentation/badge.svg" /></a>
-<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://github.com/sp-fm/python-lifecycle-training/workflows/Documentation/badge.svg
-    <span class="nc">:target:</span> https://sp-fm.github.io/python-lifecycle-training/
+<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this heading"></a></h2>
+<a class="reference external image-reference" href="https://sp-95.github.io/python-lifecycle-training/"><img alt="Documentation" src="https://github.com/sp-95/python-lifecycle-training/workflows/Documentation/badge.svg" /></a>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> https://github.com/sp-95/python-lifecycle-training/workflows/Documentation/badge.svg
+    <span class="nc">:target:</span> https://sp-95.github.io/python-lifecycle-training/
     <span class="nc">:alt:</span> Documentation
 </pre></div>
 </div>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">deploy/ci/release</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash

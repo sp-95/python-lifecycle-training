@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -112,7 +113,7 @@
            <div itemprop="articleBody">
              
   <section id="mypy">
-<h1>MyPy<a class="headerlink" href="#mypy" title="Permalink to this headline"></a></h1>
+<h1>MyPy<a class="headerlink" href="#mypy" title="Permalink to this heading"></a></h1>
 <p><strong>Mypy</strong> is a static type checker for Python. If you sprinkle your code with type
 annotations, mypy can type check your code and find common bugs. As mypy is a static
 analyzer or a lint-like tool, the type annotations are just hints for mypy and don’t
@@ -120,33 +121,33 @@ interfere when running your program. You run your program with a standard Python
 interpreter, and the annotations are treated effectively as comments.</p>
 <p>For further information visit <a class="reference external" href="https://mypy.readthedocs.io/en/stable/introduction.html">https://mypy.readthedocs.io/en/stable/introduction.html</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add mypy --dev
 </pre></div>
 </div>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Add the following in <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>:</p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[mypy]</span>
-<span class="na">ignore_missing_imports</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">disallow_untyped_defs</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">warn_redundant_casts</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">warn_unreachable</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">show_error_codes</span> <span class="o">=</span> <span class="s">true</span>
-<span class="na">pretty</span> <span class="o">=</span> <span class="s">true</span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[mypy]</span><span class="w"></span>
+<span class="na">ignore_missing_imports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">disallow_untyped_defs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">warn_redundant_casts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">warn_unreachable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">show_error_codes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
+<span class="na">pretty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mypy python_lifecycle_training tests
 </pre></div>
 </div>
 <img alt="MyPy Output" src="../_images/usage2.png" />
 </section>
 <section id="resolution">
-<h2>Resolution<a class="headerlink" href="#resolution" title="Permalink to this headline"></a></h2>
+<h2>Resolution<a class="headerlink" href="#resolution" title="Permalink to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numbers</span> <span class="kn">import</span> <span class="n">Real</span>
 
 
@@ -160,7 +161,7 @@ interpreter, and the annotations are treated effectively as comments.</p>
 </div>
 </section>
 <section id="add-a-badge">
-<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this headline"></a></h2>
+<h2>Add a badge<a class="headerlink" href="#add-a-badge" title="Permalink to this heading"></a></h2>
 <a class="reference external image-reference" href="http://mypy-lang.org/"><img alt="Checked with mypy" src="http://www.mypy-lang.org/static/mypy_badge.svg" /></a>
 <div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> http://www.mypy-lang.org/static/mypy_badge.svg
     <span class="nc">:target:</span> http://mypy-lang.org/
@@ -169,7 +170,7 @@ interpreter, and the annotations are treated effectively as comments.</p>
 </div>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">init/pre-commit</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -178,7 +179,7 @@ interpreter, and the annotations are treated effectively as comments.</p>
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove mypy --dev
 </pre></div>
 </div>

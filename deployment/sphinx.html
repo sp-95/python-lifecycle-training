@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -121,7 +122,7 @@
            <div itemprop="articleBody">
              
   <section id="documentation-sphinx">
-<h1>Documentation: Sphinx<a class="headerlink" href="#documentation-sphinx" title="Permalink to this headline"></a></h1>
+<h1>Documentation: Sphinx<a class="headerlink" href="#documentation-sphinx" title="Permalink to this heading"></a></h1>
 <p><strong>Sphinx</strong> is a tool that makes it easy to create intelligent and beautiful
 documentation, written by Georg Brandl and licensed under the BSD license.</p>
 <p>It was originally created for the Python documentation, and it has excellent facilities
@@ -146,13 +147,13 @@ the power and straightforwardness of reStructuredText and its parsing and transl
 suite, the Docutils.</p>
 <p>For more information visit <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add sphinx --dev
 </pre></div>
 </div>
 </section>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading"></a></h2>
 <p>Sphinx comes with a script called <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> that sets up a source directory
 and creates a default <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> with the most useful configuration values from a few
 questions it asks you.</p>
@@ -173,7 +174,7 @@ questions it asks you.</p>
 </div>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make -C docs html
 <span class="gp">$ </span>chromium docs/_build/html/index.html
 </pre></div>
@@ -181,7 +182,7 @@ questions it asks you.</p>
 <img alt="HTML output of sphinx quickstart" src="../_images/quickstart-html.png" />
 </section>
 <section id="theme">
-<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this headline"></a></h2>
+<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this heading"></a></h2>
 <p>Doesn’t look much right now but it’ll get better. Let’s change the theme to the most
 popular theme, Read the Docs.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add sphinx-rtd-theme --dev
@@ -207,7 +208,7 @@ popular theme, Read the Docs.</p>
 <p>Does it look better now?</p>
 </section>
 <section id="auto-documentation">
-<h2>Auto Documentation<a class="headerlink" href="#auto-documentation" title="Permalink to this headline"></a></h2>
+<h2>Auto Documentation<a class="headerlink" href="#auto-documentation" title="Permalink to this heading"></a></h2>
 <p>We can convert our code docs into readable sphinx documentation.</p>
 <p>First, uncomment the following lines in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Path setup --------------------------------------------------------------</span>
@@ -258,7 +259,7 @@ popular theme, Read the Docs.</p>
 <img alt="Sphinx auto documentation" src="../_images/autodoc.png" />
 </section>
 <section id="google-docstrings">
-<h2>Google Docstrings<a class="headerlink" href="#google-docstrings" title="Permalink to this headline"></a></h2>
+<h2>Google Docstrings<a class="headerlink" href="#google-docstrings" title="Permalink to this heading"></a></h2>
 <p>Let’s try adding a docstring in our simple calculator to see what happens</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Real</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Real</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Real</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Add two numbers</span>
@@ -302,20 +303,20 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 <p>This seems better, doesn’t it?</p>
 </section>
 <section id="document-build-test">
-<h2>Document Build Test<a class="headerlink" href="#document-build-test" title="Permalink to this headline"></a></h2>
+<h2>Document Build Test<a class="headerlink" href="#document-build-test" title="Permalink to this heading"></a></h2>
 <p>Add the following lines in your tox file</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[tox]</span>
-<span class="na">envlist</span> <span class="o">=</span> <span class="s">..., docs</span>
-<span class="na">...</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[tox]</span><span class="w"></span>
+<span class="na">envlist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">..., docs</span><span class="w"></span>
+<span class="na">...</span><span class="w"></span>
 
-<span class="k">[testenv:docs]</span>
-<span class="na">basepython</span> <span class="o">=</span> <span class="s">python</span>
-<span class="na">changedir</span> <span class="o">=</span> <span class="s">docs</span>
-<span class="na">deps</span> <span class="o">=</span>
-   <span class="na">sphinx-rtd-theme</span>
-   <span class="na">toml</span>
-<span class="na">commands</span> <span class="o">=</span>
-   <span class="na">sphinx-build -b html -d {envtmpdir}/doctrees . {envtmpdir}</span>
+<span class="k">[testenv:docs]</span><span class="w"></span>
+<span class="na">basepython</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">python</span><span class="w"></span>
+<span class="na">changedir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">docs</span><span class="w"></span>
+<span class="na">deps</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">   </span><span class="na">sphinx-rtd-theme</span><span class="w"></span>
+<span class="w">   </span><span class="na">toml</span><span class="w"></span>
+<span class="na">commands</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">   </span><span class="na">sphinx-build -b html -d {envtmpdir}/doctrees . {envtmpdir}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Run tox</p>
@@ -324,9 +325,9 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 </div>
 </section>
 <section id="miscellaneous">
-<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline"></a></h2>
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this heading"></a></h2>
 <section id="useful-sphinx-extensions">
-<h3>Useful sphinx extensions<a class="headerlink" href="#useful-sphinx-extensions" title="Permalink to this headline"></a></h3>
+<h3>Useful sphinx extensions<a class="headerlink" href="#useful-sphinx-extensions" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
 
 <span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
@@ -345,7 +346,7 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 </div>
 </section>
 <section id="dont-show-todos">
-<h3>Don’t show todos<a class="headerlink" href="#dont-show-todos" title="Permalink to this headline"></a></h3>
+<h3>Don’t show todos<a class="headerlink" href="#dont-show-todos" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for todo extension ----------------------------------------------</span>
 
 <span class="c1"># If true, `todo` and `todoList` produce output, else they produce nothing.</span>
@@ -354,14 +355,14 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 </div>
 </section>
 <section id="better-syntax-highlighting">
-<h3>Better syntax highlighting<a class="headerlink" href="#better-syntax-highlighting" title="Permalink to this headline"></a></h3>
+<h3>Better syntax highlighting<a class="headerlink" href="#better-syntax-highlighting" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The name of the Pygments (syntax highlighting) style to use.</span>
 <span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">&quot;sphinx&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="auto-generate-your-project-meta">
-<h3>Auto-generate your project meta<a class="headerlink" href="#auto-generate-your-project-meta" title="Permalink to this headline"></a></h3>
+<h3>Auto-generate your project meta<a class="headerlink" href="#auto-generate-your-project-meta" title="Permalink to this heading"></a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry add toml --dev
 </pre></div>
 </div>
@@ -391,7 +392,7 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 </section>
 </section>
 <section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
+<h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
 <p>To move on to the next step commit or stash your changes then checkout to the branch
 <code class="docutils literal notranslate"><span class="pre">deploy/ci/test</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git stash
@@ -400,7 +401,7 @@ properly we need the napoleon sphinx extension. Go ahead and add it to <code cla
 </div>
 </section>
 <section id="uninstall">
-<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline"></a></h2>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>poetry remove sphinx-rtd-theme --dev
 </pre></div>
 </div>

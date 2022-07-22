@@ -51,7 +51,7 @@ For Every Release
 
         $ git push --tags
 
-#. Create a release on GitHub at https://github.com/sp-fm/python-lifecycle-training/releases.
+#. Create a release on GitHub at https://github.com/sp-95/python-lifecycle-training/releases.
    Paste the change logs into the release's description, and come up with a title for
    the release.
 
