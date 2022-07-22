@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-lifecycle-training"
-version = "0.1.0"
+version = "0.1.3"
 repository = "https://github.com/sp-95/python-lifecycle-training"
 documentation = "https://sp-95.github.io/python-lifecycle-training/"
 description = "A training program to learn the Python Development Cycle"
@@ -82,6 +82,7 @@ exclude_lines = [
 ]
 fail_under = 90
 ignore_errors = true
+skip_empty = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
